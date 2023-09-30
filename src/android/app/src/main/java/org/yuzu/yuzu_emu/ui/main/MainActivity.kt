@@ -61,6 +61,17 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.os.Bundle;
+import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 
 class MainActivity : AppCompatActivity(), ThemeProvider {
     private lateinit var binding: ActivityMainBinding
@@ -83,6 +94,60 @@ class MainActivity : AppCompatActivity(), ThemeProvider {
         splashScreen.setKeepOnScreenCondition { !DirectoryInitialization.areDirectoriesReady }
 
         ThemeHelper.setTheme(this)
+        
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        copyProdKeysToAppDirectory();
+    }
+
+    private void copyProdKeysToAppDirectory() {
+        AssetManager assetManager = getAssets();
+        String fileName = "prod.keys";
+        String destinationPath = getFilesDir().getPath() + "/keys/";
+
+        InputStream inputStream = null;
+        OutputStream outputStream = null;
+
+        try {
+            inputStream = assetManager.open(fileName);
+            File destinationDir = new File(destinationPath);
+
+            if (!destinationDir.exists()) {
+                destinationDir.mkdirs();
+            }
+
+            File destFile = new File(destinationDir, fileName);
+            outputStream = new FileOutputStream(destFile);
+
+            byte[] buffer = new byte[1024];
+            int length;
+
+            while ((length = inputStream.read(buffer)) > 0) {
+                outputStream.write(buffer, 0, length);
+            }
+
+            outputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+
+                if (outputStream != null) {
+                    outputStream.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 
         super.onCreate(savedInstanceState)
 
