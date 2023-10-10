@@ -1,3 +1,12 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [11718](https://github.com/yuzu-emu/yuzu//pull/11718) | [`21bc2c14b`](https://github.com/yuzu-emu/yuzu//pull/11718/files) | common: add arm64 native clock | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
