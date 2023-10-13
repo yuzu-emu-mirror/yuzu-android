@@ -1,3 +1,12 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [11649](https://github.com/yuzu-emu/yuzu//pull/11649) | [`a5fb9de6f`](https://github.com/yuzu-emu/yuzu//pull/11649/files) | android: Driver manager | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
