@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [11827](https://github.com/yuzu-emu/yuzu//pull/11827) | [`689f346e9`](https://github.com/yuzu-emu/yuzu//pull/11827/files) | nvnflinger: fix reporting and freeing of preallocated buffers | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [11876](https://github.com/yuzu-emu/yuzu//pull/11876) | [`e0834ee50`](https://github.com/yuzu-emu/yuzu//pull/11876/files) | vulkan_common: use highest API version | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
