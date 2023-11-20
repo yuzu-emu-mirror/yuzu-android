@@ -6,7 +6,7 @@
 
 namespace Core {
 
-#ifdef ANDROID
+#ifdef ARCHITECTURE_arm64
 constexpr size_t VirtualReserveSize = 1ULL << 38;
 #else
 constexpr size_t VirtualReserveSize = 1ULL << 39;
@@ -15,6 +15,7 @@ constexpr size_t VirtualReserveSize = 1ULL << 39;
 DeviceMemory::DeviceMemory()
     : buffer{Kernel::Board::Nintendo::Nx::KSystemControl::Init::GetIntendedMemorySize(),
              VirtualReserveSize} {}
+
 DeviceMemory::~DeviceMemory() = default;
 
 } // namespace Core

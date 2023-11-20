@@ -112,6 +112,7 @@ private:
     std::array<KThread*, Core::Hardware::NUM_CPU_CORES> m_pinned_threads{};
     std::array<DebugWatchpoint, Core::Hardware::NUM_WATCHPOINTS> m_watchpoints{};
     std::map<KProcessAddress, u64> m_debug_page_refcounts{};
+    std::unordered_map<u64, u64> m_post_handlers{};
     std::atomic<s64> m_cpu_time{};
     std::atomic<s64> m_num_process_switches{};
     std::atomic<s64> m_num_thread_switches{};
@@ -150,7 +151,8 @@ public:
                       std::span<const u32> caps, KResourceLimit* res_limit,
                       KMemoryManager::Pool pool, bool immortal);
     Result Initialize(const Svc::CreateProcessParameter& params, std::span<const u32> user_caps,
-                      KResourceLimit* res_limit, KMemoryManager::Pool pool);
+                      KResourceLimit* res_limit, KMemoryManager::Pool pool,
+                      KProcessAddress aslr_space_start);
     void Exit();
 
     const char* GetName() const {
@@ -466,6 +468,10 @@ public:
 
     static void Switch(KProcess* cur_process, KProcess* next_process);
 
+    std::unordered_map<u64, u64>& GetPostHandlers() noexcept {
+        return m_post_handlers;
+    }
+
 public:
     // Attempts to insert a watchpoint into a free slot. Returns false if none are available.
     bool InsertWatchpoint(KProcessAddress addr, u64 size, DebugWatchpointType type);
@@ -479,7 +485,7 @@ public:
 
 public:
     Result LoadFromMetadata(const FileSys::ProgramMetadata& metadata, std::size_t code_size,
-                            bool is_hbl);
+                            KProcessAddress aslr_space_start, bool is_hbl);
 
     void LoadModule(CodeSet code_set, KProcessAddress base_addr);
 

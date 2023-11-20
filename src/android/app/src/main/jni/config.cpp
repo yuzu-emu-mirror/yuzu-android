@@ -177,6 +177,7 @@ void Config::ReadValues() {
     ReadSetting("Core", Settings::values.memory_layout_mode);
 
     // Cpu
+    ReadSetting("Cpu", Settings::values.cpu_backend);
     ReadSetting("Cpu", Settings::values.cpu_accuracy);
     ReadSetting("Cpu", Settings::values.cpu_debug_mode);
     ReadSetting("Cpu", Settings::values.cpuopt_page_tables);
