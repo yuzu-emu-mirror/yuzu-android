@@ -153,6 +153,10 @@ use_multi_core =
 use_unsafe_extended_memory_layout =
 
 [Cpu]
+Selects the preferred CPU backend for executing ARM instructions
+# 0 (default): Dynarmic, 1: NCE
+cpu_backend =
+
 # Adjusts various optimizations.
 # Auto-select mode enables choice unsafe optimizations.
 # Accurate enables only safe optimizations.
