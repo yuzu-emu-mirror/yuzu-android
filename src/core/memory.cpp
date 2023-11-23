@@ -53,7 +53,7 @@ struct Memory::Impl {
     }
 
     void MapMemoryRegion(Common::PageTable& page_table, Common::ProcessAddress base, u64 size,
-                         Common::PhysicalAddress target) {
+                         Common::PhysicalAddress target, Common::MemoryPermission perms) {
         ASSERT_MSG((size & YUZU_PAGEMASK) == 0, "non-page aligned size: {:016X}", size);
         ASSERT_MSG((base & YUZU_PAGEMASK) == 0, "non-page aligned base: {:016X}", GetInteger(base));
         ASSERT_MSG(target >= DramMemoryMap::Base, "Out of bounds target: {:016X}",
@@ -63,7 +63,7 @@ struct Memory::Impl {
 
         if (Settings::IsFastmemEnabled()) {
             system.DeviceMemory().buffer.Map(GetInteger(base),
-                                             GetInteger(target) - DramMemoryMap::Base, size);
+                                             GetInteger(target) - DramMemoryMap::Base, size, perms);
         }
     }
 
@@ -831,8 +831,8 @@ void Memory::SetCurrentPageTable(Kernel::KProcess& process, u32 core_id) {
 }
 
 void Memory::MapMemoryRegion(Common::PageTable& page_table, Common::ProcessAddress base, u64 size,
-                             Common::PhysicalAddress target) {
-    impl->MapMemoryRegion(page_table, base, size, target);
+                             Common::PhysicalAddress target, Common::MemoryPermission perms) {
+    impl->MapMemoryRegion(page_table, base, size, target, perms);
 }
 
 void Memory::UnmapRegion(Common::PageTable& page_table, Common::ProcessAddress base, u64 size) {
@@ -999,6 +999,19 @@ void Memory::InvalidateRegion(Common::ProcessAddress dest_addr, size_t size) {
 
 void Memory::FlushRegion(Common::ProcessAddress dest_addr, size_t size) {
     impl->FlushRegion(dest_addr, size);
+}
+
+bool Memory::InvalidateNCE(Common::ProcessAddress vaddr, size_t size) {
+    bool mapped = true;
+    u8* const ptr = impl->GetPointerImpl(
+        GetInteger(vaddr),
+        [&] {
+            LOG_ERROR(HW_Memory, "Unmapped InvalidateNCE for {} bytes @ {:#x}", size,
+                      GetInteger(vaddr));
+            mapped = false;
+        },
+        [&] { impl->system.GPU().InvalidateRegion(GetInteger(vaddr), size); });
+    return mapped && ptr != nullptr;
 }
 
 } // namespace Core::Memory

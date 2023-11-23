@@ -52,6 +52,7 @@ add_library(common STATIC
     fiber.cpp
     fiber.h
     fixed_point.h
+    free_region_manager.h
     fs/file.cpp
     fs/file.h
     fs/fs.cpp
@@ -164,6 +165,13 @@ if (WIN32)
     windows/timer_resolution.h
   )
   target_link_libraries(common PRIVATE ntdll)
+endif()
+
+if (NOT WIN32)
+  target_sources(common PRIVATE
+    signal_chain.cpp
+    signal_chain.h
+  )
 endif()
 
 if(ANDROID)

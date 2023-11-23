@@ -61,3 +61,6 @@
 [submodule "breakpad"]
 	path = externals/breakpad
 	url = https://github.com/yuzu-emu/breakpad.git
+[submodule "oaknut"]
+	path = externals/oaknut
+	url = https://github.com/merryhime/oaknut
