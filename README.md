@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12074](https://github.com/yuzu-emu/yuzu//pull/12074) | [`a76a8fb5f`](https://github.com/yuzu-emu/yuzu//pull/12074/files) | Implement Native Code Execution (NCE) | [GPUCode](https://github.com/GPUCode/) | Yes |
+| [12204](https://github.com/yuzu-emu/yuzu//pull/12204) | [`caa83609f`](https://github.com/yuzu-emu/yuzu//pull/12204/files) | android: Multi directory UI | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
