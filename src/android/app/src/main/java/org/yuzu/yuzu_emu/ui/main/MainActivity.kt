@@ -70,6 +70,45 @@ class MainActivity : AppCompatActivity(), ThemeProvider {
     val savesFolderRoot get() = File(savesFolder).listFiles()?.firstOrNull()?.canonicalPath ?: ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // 定义一个变量keysDirPath，其值是应用程序文件目录下"keys"子目录的绝对路径
+val keysDirPath = applicationContext.filesDir.absolutePath + "/keys/"
+// 创建一个File对象，代表keysDirPath所指示的文件或目录
+val keysDir = File(keysDirPath)
+// 检查"keys"目录是否存在，如果不存在则创建它
+if (!keysDir.exists()) {
+    keysDir.mkdir()
+    
+    // 尝试打开assets目录下的"keys.txt"文件，并创建一个输入流inputStream
+    try {
+        val inputStream = applicationContext.assets.open("prod.keys")
+        
+        // 创建一个输出流outputStream，用于将数据写入到keys目录下的"prod.keys"文件
+        val outputStream = FileOutputStream(keysDirPath + "prod.keys")
+        
+        // 使用缓冲区来提高读写效率，创建输入缓冲流bufferedInputStream和输出缓冲流bufferedOutputStream
+        val bufferedInputStream = BufferedInputStream(inputStream)
+        val bufferedOutputStream = BufferedOutputStream(outputStream)
+        
+        // 创建一个大小为1024字节的字节数组buffer，用于在输入输出流之间传递数据
+        val buffer = ByteArray(1024)
+        var length: Int
+        
+        // 从输入流读取数据，并将其写入输出流中，直到读取完所有数据为止
+        while (bufferedInputStream.read(buffer).also { length = it } != -1) {
+            bufferedOutputStream.write(buffer, 0, length)
+        }
+        
+        // 关闭输入流和输出流，释放资源
+        bufferedInputStream.close()
+        bufferedOutputStream.close()
+    } catch (e: IOException) {
+        // 如果在上述过程中发生异常，打印异常的堆栈跟踪信息，帮助定位问题原因
+        e.printStackTrace()
+    }
+} else {
+    // 如果"keys"目录已经存在，打印一条消息提示用户目录已经存在，避免重复操作
+    println("Keys directory already exists.")
+}
         val splashScreen = installSplashScreen()
         splashScreen.setKeepOnScreenCondition { !DirectoryInitialization.areDirectoriesReady }
 
