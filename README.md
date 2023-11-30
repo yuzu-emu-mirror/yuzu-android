@@ -1,3 +1,12 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12074](https://github.com/yuzu-emu/yuzu//pull/12074) | [`4a3abba16`](https://github.com/yuzu-emu/yuzu//pull/12074/files) | Implement Native Code Execution (NCE) | [GPUCode](https://github.com/GPUCode/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
