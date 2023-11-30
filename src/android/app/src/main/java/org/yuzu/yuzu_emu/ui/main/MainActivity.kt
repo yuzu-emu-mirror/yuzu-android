@@ -72,27 +72,27 @@ class MainActivity : AppCompatActivity(), ThemeProvider {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val keysDirPath = applicationContext.filesDir.absolutePath + "/keys/"
-       val keysDir = File(keysDirPath)
-       if (!keysDir.exists()) {
-           keysDir.mkdir()
-           try {
-           val inputStream = applicationContext.assets.open("prod.keys")
-               val outputStream = FileOutputStream(keysDirPath + "prod.keys")
-               val bufferedInputStream = BufferedInputStream(inputStream)
-               val bufferedOutputStream = BufferedOutputStream(outputStream)
-               val buffer = ByteArray(1024)
-               var length: Int
-               while (bufferedInputStream.read(buffer).also { length = it } != -1) {
-               bufferedOutputStream.write(buffer, 0, length)
-                   }
-               bufferedInputStream.close()
-               bufferedOutputStream.close()
-               } catch (e: IOException) {
-           e.printStackTrace()
-               }
-           } else {
-       println("Keys directory already exists.")
-       }
+        val keysDir = File(keysDirPath)
+        if (!keysDir.exists()) {
+            keysDir.mkdir()
+            try {
+                val inputStream = applicationContext.assets.open("prod.keys")
+                val outputStream = FileOutputStream(keysDirPath + "prod.keys")
+                val bufferedInputStream = BufferedInputStream(inputStream)
+                val bufferedOutputStream = BufferedOutputStream(outputStream)
+                val buffer = ByteArray(1024)
+                var length: Int
+                while (bufferedInputStream.read(buffer).also { length = it } != -1) {
+                    bufferedOutputStream.write(buffer, 0, length)
+                }
+                bufferedInputStream.close()
+                bufferedOutputStream.close()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+        } else {
+            println("Keys directory already exists.")
+        }
         val splashScreen = installSplashScreen()
         splashScreen.setKeepOnScreenCondition { !DirectoryInitialization.areDirectoriesReady }
 
