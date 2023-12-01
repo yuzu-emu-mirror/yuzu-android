@@ -1,3 +1,12 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12235](https://github.com/yuzu-emu/yuzu//pull/12235) | [`e7dd968ac`](https://github.com/yuzu-emu/yuzu//pull/12235/files) | renderer_vulkan: adjust window origin and swizzle independently | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
