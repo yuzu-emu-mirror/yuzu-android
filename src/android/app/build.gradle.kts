@@ -16,8 +16,8 @@ plugins {
 }
 
 dependencies {
-    implementation 'com.squareup.okhttp3:okhttp:4.9.0';
-    implementation 'com.google.android.play:core:1.10.0';
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation("com.google.android.play:core:1.10.0")
 }
 
 /**
