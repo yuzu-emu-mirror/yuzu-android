@@ -15,6 +15,11 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint") version "11.4.0"
 }
 
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.google.android.play:core:1.10.0'
+}
+
 /**
  * Use the number of seconds/10 since Jan 1 2016 as the versionCode.
  * This lets us upload a new build at most every 10 seconds for the
