@@ -108,6 +108,10 @@ class MainActivity : AppCompatActivity(), ThemeProvider {
                     ),
                     ThemeHelper.SYSTEM_BAR_ALPHA
                 )
+                updateManager = UpdateManager(this)
+                updateManager.checkForUpdates()
+    }
+                }
             )
         }
 
