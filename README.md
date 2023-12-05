@@ -1,3 +1,12 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12271](https://github.com/yuzu-emu/yuzu//pull/12271) | [`9de99839b`](https://github.com/yuzu-emu/yuzu//pull/12271/files) | nce: fix pre-text patch for single modules | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
