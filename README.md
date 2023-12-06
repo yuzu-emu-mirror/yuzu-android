@@ -1,3 +1,12 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12236](https://github.com/yuzu-emu/yuzu//pull/12236) | [`f0ee3e29c`](https://github.com/yuzu-emu/yuzu//pull/12236/files) | core: refactor emulated cpu core activation | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
