@@ -1,3 +1,12 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12335](https://github.com/yuzu-emu/yuzu//pull/12335) | [`edcd6d547`](https://github.com/yuzu-emu/yuzu//pull/12335/files) | android: Game Properties | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
