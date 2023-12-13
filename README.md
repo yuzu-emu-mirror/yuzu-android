@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12237](https://github.com/yuzu-emu/yuzu//pull/12237) | [`a05c24242`](https://github.com/yuzu-emu/yuzu//pull/12237/files) | nce: implement instruction emulation for misaligned memory accesses | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12335](https://github.com/yuzu-emu/yuzu//pull/12335) | [`86d26914a`](https://github.com/yuzu-emu/yuzu//pull/12335/files) | android: Game Properties | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
