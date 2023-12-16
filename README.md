@@ -1,3 +1,17 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12237](https://github.com/yuzu-emu/yuzu//pull/12237) | [`a05c24242`](https://github.com/yuzu-emu/yuzu//pull/12237/files) | nce: implement instruction emulation for misaligned memory accesses | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12335](https://github.com/yuzu-emu/yuzu//pull/12335) | [`86d26914a`](https://github.com/yuzu-emu/yuzu//pull/12335/files) | android: Game Properties | [t895](https://github.com/t895/) | Yes |
+| [12344](https://github.com/yuzu-emu/yuzu//pull/12344) | [`2a3f84aaf`](https://github.com/yuzu-emu/yuzu//pull/12344/files) | video_core: use interval map for page count tracking | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12345](https://github.com/yuzu-emu/yuzu//pull/12345) | [`b560ade66`](https://github.com/yuzu-emu/yuzu//pull/12345/files) | renderer_vulkan: cap async presentation frame count | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12349](https://github.com/yuzu-emu/yuzu//pull/12349) | [`8abdfcf8d`](https://github.com/yuzu-emu/yuzu//pull/12349/files) | Have GetActiveChannelCount return the system channels instead of host device channels | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12358](https://github.com/yuzu-emu/yuzu//pull/12358) | [`8ad5f2c50`](https://github.com/yuzu-emu/yuzu//pull/12358/files) | common: use memory holepunching when clearing memory | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
