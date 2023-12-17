@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12304](https://github.com/yuzu-emu/yuzu//pull/12304) | [`fcc85abe2`](https://github.com/yuzu-emu/yuzu//pull/12304/files) | nvnflinger: mark buffer as acquired when acquired | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12349](https://github.com/yuzu-emu/yuzu//pull/12349) | [`6851e9329`](https://github.com/yuzu-emu/yuzu//pull/12349/files) | Have GetActiveChannelCount return the system channels instead of host device channels | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
