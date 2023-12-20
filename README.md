@@ -1,3 +1,15 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12390](https://github.com/yuzu-emu/yuzu//pull/12390) | [`fba3fa705`](https://github.com/yuzu-emu/yuzu//pull/12390/files) | renderer_vulkan: work around turnip binding bug in a610 | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12400](https://github.com/yuzu-emu/yuzu//pull/12400) | [`a2b567dfd`](https://github.com/yuzu-emu/yuzu//pull/12400/files) | vk_query_cache: Fix prefix sum max_accumulation_limit logic | [ameerj](https://github.com/ameerj/) | Yes |
+| [12403](https://github.com/yuzu-emu/yuzu//pull/12403) | [`fcfa8b680`](https://github.com/yuzu-emu/yuzu//pull/12403/files) |  shader_recompiler: use minimal clip distance array  | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12409](https://github.com/yuzu-emu/yuzu//pull/12409) | [`93c19a40b`](https://github.com/yuzu-emu/yuzu//pull/12409/files) | nce: fix read size in simd immediate emulation | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
