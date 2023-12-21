@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12407](https://github.com/yuzu-emu/yuzu//pull/12407) | [`6e2cbd474`](https://github.com/yuzu-emu/yuzu//pull/12407/files) | shader_recompiler: patch small float image writes on broken drivers | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12410](https://github.com/yuzu-emu/yuzu//pull/12410) | [`d0a75580d`](https://github.com/yuzu-emu/yuzu//pull/12410/files) | renderer_vulkan: don't pass null view when nullDescriptor is not supported | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
