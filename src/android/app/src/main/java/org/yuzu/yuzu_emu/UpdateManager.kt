@@ -9,7 +9,7 @@ import android.util.Log
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
-import okhttp3.ResponseBody
+import okhttp3.ResponseBody // 引入 ResponseBody
 import org.json.JSONObject
 
 class UpdateManager(private val context: Context) {
@@ -18,7 +18,7 @@ class UpdateManager(private val context: Context) {
 
     fun checkForUpdates() {
         val currentVersion = BuildConfig.VERSION_NAME // 当前应用版本
-        val updateUrl = "http://mkoc.cn/aip/version.php" // 用于检查更新的服务器端点
+        val updateUrl = "https://your-server.com/check_update.php" // 用于检查更新的服务器端点
 
         // 异步任务执行更新检查
         object : AsyncTask<Void, Void, String>() {
@@ -30,16 +30,15 @@ class UpdateManager(private val context: Context) {
                         .build()
 
                     val response: Response = client.newCall(request).execute()
-                    if (response.isSuccessful) {
-                        val responseBody: ResponseBody? = response.body()
-                        if (responseBody != null) {
-                            val result = responseBody.string()
-                            return result
-                        } else {
-                            Log.e(TAG, "Response body is empty")
-                        }
+
+                    val responseBody: ResponseBody? = response.body() // 存储在变量中
+                    val responseCode: Int = response.code() // 存储在变量中
+
+                    if (responseBody != null) {
+                        val result = responseBody.string()
+                        return result
                     } else {
-                        Log.e(TAG, "Unsuccessful response: ${response.code()}")
+                        Log.e(TAG, "Response body is empty")
                     }
                 } catch (e: Exception) {
                     Log.e(TAG, "Error checking for updates: ${e.message}")
