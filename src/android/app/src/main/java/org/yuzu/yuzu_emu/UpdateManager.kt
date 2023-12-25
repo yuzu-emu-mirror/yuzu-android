@@ -9,6 +9,7 @@ import android.util.Log
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
+import okhttp3.ResponseBody
 import org.json.JSONObject
 
 class UpdateManager(private val context: Context) {
@@ -30,18 +31,18 @@ class UpdateManager(private val context: Context) {
 
                     val response: Response = client.newCall(request).execute()
 
-                    val responseBody = response.body()
-                    val responseCode = response.code()
+                    if (response.isSuccessful) {
+                        val responseBody: ResponseBody? = response.body() // 存储在变量中
+                        val responseCode = response.code() // 存储在变量中
 
-                    if (responseBody != null) {
-                        if (responseCode == 200) {
+                        if (responseBody != null) {
                             val result = responseBody.string()
                             return result
                         } else {
-                            Log.e(TAG, "Unsuccessful response: $responseCode")
+                            Log.e(TAG, "Response body is empty")
                         }
                     } else {
-                        Log.e(TAG, "Response body is empty")
+                        Log.e(TAG, "Unsuccessful response: ${response.code()}")
                     }
                 } catch (e: Exception) {
                     Log.e(TAG, "Error checking for updates: ${e.message}")
