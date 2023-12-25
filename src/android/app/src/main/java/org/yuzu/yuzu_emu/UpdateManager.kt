@@ -1,89 +1,81 @@
 package org.yuzu.yuzu_emu
 
-import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
-import android.os.AsyncTask
 import android.util.Log
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
-import okhttp3.ResponseBody // 引入 ResponseBody
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import okhttp3.*
 import org.json.JSONObject
+import java.io.IOException
 
-class UpdateManager(private val context: Context) {
+object UpdateManager {
 
-    private val TAG = "UpdateManager"
+    private val client = OkHttpClient()
 
-    fun checkForUpdates() {
-        val currentVersion = BuildConfig.VERSION_NAME // 当前应用版本
-        val updateUrl = "https://your-server.com/check_update.php" // 用于检查更新的服务器端点
+    fun checkAndInstallUpdate(context: Context) {
+        GlobalScope.launch(Dispatchers.IO) {
+            val currentVersionName =
+                context.packageManager.getPackageInfo(context.packageName, 0).versionName
+            val latestVersionName = getLatestVersionNameFromServer()
 
-        // 异步任务执行更新检查
-        object : AsyncTask<Void, Void, String>() {
-            override fun doInBackground(vararg params: Void): String {
-                try {
-                    val client = OkHttpClient()
-                    val request = Request.Builder()
-                        .url(updateUrl)
-                        .build()
-
-                    val response: Response = client.newCall(request).execute()
-
-                    val responseBody: ResponseBody? = response.body
-                    val responseCode: Int = response.code
-
-                    if (responseBody != null) {
-                        val result = responseBody.string()
-                        return result
-                    } else {
-                        Log.e(TAG, "Response body is empty")
-                    }
-                } catch (e: Exception) {
-                    Log.e(TAG, "Error checking for updates: ${e.message}")
-                }
-                return ""
-            }
-
-            override fun onPostExecute(result: String) {
-                super.onPostExecute(result)
-                if (result.isNotEmpty()) {
-                    handleUpdateResponse(result, currentVersion)
+            withContext(Dispatchers.Main) {
+                if (isNewVersionAvailable(currentVersionName, latestVersionName)) {
+                    showUpdateDialog(context)
+                    showUpdateAvailableMessage(context)
+                } else {
+                    showNoUpdateAvailableMessage(context)
                 }
             }
-        }.execute()
-    }
-
-    private fun handleUpdateResponse(response: String, currentVersion: String) {
-        try {
-            val jsonObject = JSONObject(response)
-            val latestVersion = jsonObject.getString("version")
-            val releaseNotes = jsonObject.getString("release_notes")
-            val downloadUrl = jsonObject.getString("download_url")
-
-            if (latestVersion != currentVersion) {
-                showUpdateDialog(latestVersion, releaseNotes, downloadUrl)
-            }
-        } catch (e: Exception) {
-            Log.e(TAG, "Error parsing update response: ${e.message}")
         }
     }
 
-    private fun showUpdateDialog(version: String, releaseNotes: String, downloadUrl: String) {
-        val alertDialogBuilder = AlertDialog.Builder(context)
-        alertDialogBuilder.setTitle("有新的更新可用")
-        alertDialogBuilder.setMessage("版本: $version\n\n$releaseNotes")
-        alertDialogBuilder.setPositiveButton("立即更新") { dialog, _ ->
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(downloadUrl)
-            context.startActivity(intent)
-            dialog.dismiss()
+    private suspend fun getLatestVersionNameFromServer(): String {
+        val request = Request.Builder()
+            .url("http://mkoc.cn/aip/version.php")
+            .build()
+
+        return try {
+            val response: Response = client.newCall(request).execute()
+            val responseBody = response.body?.string()
+
+            if (responseBody != null) {
+                val jsonObject = JSONObject(responseBody)
+                jsonObject.getString("versionName")
+            } else {
+                ""
+            }
+        } catch (e: IOException) {
+            Log.e("UpdateManager", "Error checking for updates: ${e.message}")
+            ""
         }
-        alertDialogBuilder.setNegativeButton("稍后再说") { dialog, _ ->
-            dialog.dismiss()
-        }
-        val alertDialog = alertDialogBuilder.create()
-        alertDialog.show()
+    }
+
+    private fun isNewVersionAvailable(currentVersion: String, latestVersion: String): Boolean {
+        return latestVersion.compareTo(currentVersion) > 0
+    }
+
+    private fun showUpdateDialog(context: Context) {
+        AlertDialog.Builder(context)
+            .setTitle("发现新版本")
+            .setMessage("有新版本可用，是否立即更新？")
+            .setPositiveButton("更新") { dialog, which ->
+                // 处理更新操作
+            }
+            .setNegativeButton("稍后") { dialog, which ->
+                // 稍后处理更新操作
+            }
+            .show()
+    }
+
+    private fun showUpdateAvailableMessage(context: Context) {
+        Toast.makeText(context, "发现新版本，请及时更新。", Toast.LENGTH_LONG).show()
+    }
+
+    private fun showNoUpdateAvailableMessage(context: Context) {
+        Toast.makeText(context, "您的应用已经是最新版本。", Toast.LENGTH_SHORT).show()
     }
 }
