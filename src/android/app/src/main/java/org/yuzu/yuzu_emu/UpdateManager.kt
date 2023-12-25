@@ -6,9 +6,9 @@ import android.content.Intent
 import android.net.Uri
 import android.os.AsyncTask
 import android.util.Log
-import com.squareup.okhttp.OkHttpClient
-import com.squareup.okhttp.Request
-import com.squareup.okhttp.Response
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import org.json.JSONObject
 
 class UpdateManager(private val context: Context) {
