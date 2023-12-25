@@ -208,7 +208,7 @@ ktlint {
 }
 
 dependencies {
-    implementation("com.squareup.okhttp3:okhttp:4.9.2")
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
     implementation("org.json:json:20210307")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
