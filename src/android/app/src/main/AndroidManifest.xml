@@ -16,6 +16,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="org.yuzu.yuzu_emu.YuzuApplication"
@@ -27,6 +28,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         android:isGame="true"
         android:appCategory="game"
         android:banner="@drawable/tv_banner"
+        android:networkSecurityConfig="@xml/network_security_config">
         android:fullBackupContent="@xml/data_extraction_rules"
         android:dataExtractionRules="@xml/data_extraction_rules_api_31"
         android:enableOnBackInvokedCallback="true">
