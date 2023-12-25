@@ -50,6 +50,7 @@ import java.io.BufferedInputStream
 import java.io.BufferedOutputStream
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
+import org.yuzu.yuzu_emu.UpdateManager
 
 class MainActivity : AppCompatActivity(), ThemeProvider {
     private lateinit var binding: ActivityMainBinding
@@ -62,6 +63,8 @@ class MainActivity : AppCompatActivity(), ThemeProvider {
     override var themeId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val updateManager = UpdateManager(this)
+        updateManager.checkForUpdates()
         val splashScreen = installSplashScreen()
         splashScreen.setKeepOnScreenCondition { !DirectoryInitialization.areDirectoriesReady }
 
