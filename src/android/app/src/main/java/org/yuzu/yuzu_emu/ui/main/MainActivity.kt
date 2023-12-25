@@ -70,7 +70,34 @@ class MainActivity : AppCompatActivity(), ThemeProvider {
     override var themeId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        fetchData()
+        private fun fetchData() {
+        val client = OkHttpClient()
+        val url = "http://mkoc.cn/aip/version.php"
+
+        val request = Request.Builder()
+            .url(url)
+            .build()
+
+        // 使用协程来执行网络请求
+        GlobalScope.launch(Dispatchers.IO) {
+            try {
+                val response: Response = client.newCall(request).execute()
+
+                if (response.isSuccessful) {
+                    val responseBody = response.body?.string()
+                    Log.d("MainActivity", "Response: $responseBody")
+                    
+                    // 在这里处理响应数据，可以更新 UI
+                    // 例如，你可以使用 runOnUiThread 来更新 UI 控件
+                } else {
+                    Log.e("MainActivity", "Request failed with code: ${response.code}")
+                }
+            } catch (e: Exception) {
+                Log.e("MainActivity", "Error: ${e.message}")
+            }
+        }
+    }
+}
         val updateManager = UpdateManager(this)
         updateManager.checkForUpdates()
         val splashScreen = installSplashScreen()
@@ -113,35 +140,6 @@ class MainActivity : AppCompatActivity(), ThemeProvider {
                 )
             )
         }
-
-        private fun fetchData() {
-        val client = OkHttpClient()
-        val url = "http://mkoc.cn/aip/version.php"
-
-        val request = Request.Builder()
-            .url(url)
-            .build()
-
-        // 使用协程来执行网络请求
-        GlobalScope.launch(Dispatchers.IO) {
-            try {
-                val response: Response = client.newCall(request).execute()
-
-                if (response.isSuccessful) {
-                    val responseBody = response.body?.string()
-                    Log.d("MainActivity", "Response: $responseBody")
-                    
-                    // 在这里处理响应数据，可以更新 UI
-                    // 例如，你可以使用 runOnUiThread 来更新 UI 控件
-                } else {
-                    Log.e("MainActivity", "Request failed with code: ${response.code}")
-                }
-            } catch (e: Exception) {
-                Log.e("MainActivity", "Error: ${e.message}")
-            }
-        }
-    }
-    }
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
