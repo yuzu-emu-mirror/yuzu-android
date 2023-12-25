@@ -46,7 +46,7 @@ class UpdateManager(private val context: Context) {
                 } catch (e: Exception) {
                     Log.e(TAG, "Error checking for updates: ${e.message}")
                 }
-                return ""  // 处理失败的情况，返回空字符串
+                return ""
             }
 
             override fun onPostExecute(result: String) {
