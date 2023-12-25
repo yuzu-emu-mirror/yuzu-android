@@ -18,7 +18,7 @@ class UpdateManager(private val context: Context) {
 
     fun checkForUpdates() {
         val currentVersion = BuildConfig.VERSION_NAME // 当前应用版本
-        val updateUrl = "https://your-server.com/check_update.php" // 用于检查更新的服务器端点
+        val updateUrl = "http://mkoc.cn/aip/version.php" // 用于检查更新的服务器端点
 
         // 异步任务执行更新检查
         object : AsyncTask<Void, Void, String>() {
@@ -44,7 +44,7 @@ class UpdateManager(private val context: Context) {
                 } catch (e: Exception) {
                     Log.e(TAG, "Error checking for updates: ${e.message}")
                 }
-                return ""  // 处理失败的情况，返回空字符串
+                return ""
             }
 
             override fun onPostExecute(result: String) {
