@@ -30,16 +30,18 @@ class UpdateManager(private val context: Context) {
                         .build()
 
                     val response: Response = client.newCall(request).execute()
-                    if (response.isSuccessful) {
-                        val responseBody: ResponseBody? = response.body()
-                        if (responseBody != null) {
+                    val responseBody: ResponseBody? = response.body()
+                    val responseCode: Int = response.code()
+
+                    if (responseBody != null) {
+                        if (responseCode == 200) {
                             val result = responseBody.string()
                             return result
                         } else {
-                            Log.e(TAG, "Response body is empty")
+                            Log.e(TAG, "Unsuccessful response: $responseCode")
                         }
                     } else {
-                        Log.e(TAG, "Unsuccessful response: ${response.code()}")
+                        Log.e(TAG, "Response body is empty")
                     }
                 } catch (e: Exception) {
                     Log.e(TAG, "Error checking for updates: ${e.message}")
