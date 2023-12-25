@@ -31,8 +31,8 @@ class UpdateManager(private val context: Context) {
 
                     val response: Response = client.newCall(request).execute()
 
-                    val responseBody: ResponseBody? = response.body() // 存储在变量中
-                    val responseCode: Int = response.code() // 存储在变量中
+                    val responseBody: ResponseBody? = response.body
+                    val responseCode: Int = response.code
 
                     if (responseBody != null) {
                         val result = responseBody.string()
