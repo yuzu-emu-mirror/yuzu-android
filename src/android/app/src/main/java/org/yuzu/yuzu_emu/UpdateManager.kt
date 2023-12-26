@@ -87,7 +87,7 @@ object UpdateManager {
 
 private fun showNoUpdateAvailableMessage(context: Context) {
     Toast.makeText(
-        context, 
+        context,
         "您的应用已经是最新版本。",
         Toast.LENGTH_SHORT
     ).show()
