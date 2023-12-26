@@ -1,3 +1,5 @@
+package org.yuzu.yuzu_emu
+
 import android.app.DownloadManager
 import android.content.Context
 import android.content.Intent
