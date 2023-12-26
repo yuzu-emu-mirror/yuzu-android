@@ -1,3 +1,15 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12448](https://github.com/yuzu-emu/yuzu//pull/12448) | [`b1d4804c0`](https://github.com/yuzu-emu/yuzu//pull/12448/files) | renderer_vulkan: demote format assert to error log | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12449](https://github.com/yuzu-emu/yuzu//pull/12449) | [`6a1ddc502`](https://github.com/yuzu-emu/yuzu//pull/12449/files) | renderer_vulkan: skip SetObjectNameEXT on unsupported driver | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12466](https://github.com/yuzu-emu/yuzu//pull/12466) | [`5f3720138`](https://github.com/yuzu-emu/yuzu//pull/12466/files) |  core: track separate heap allocation for linux  | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12467](https://github.com/yuzu-emu/yuzu//pull/12467) | [`cfc6c5f8f`](https://github.com/yuzu-emu/yuzu//pull/12467/files) | Revert " shader_recompiler: use minimal clip distance array " | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
