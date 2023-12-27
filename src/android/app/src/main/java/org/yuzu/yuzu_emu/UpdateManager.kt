@@ -98,7 +98,7 @@ object UpdateManager {
                         // 处理文件复制错误
                     }
                 } else {
-                    Log.e("UpdateManager", "下载失败: HTTP ${response.code()}")
+                    Log.e("UpdateManager", "下载失败: HTTP ${response.code}")
                     // 处理下载失败
                 }
             }
