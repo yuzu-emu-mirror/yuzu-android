@@ -60,7 +60,7 @@ object UpdateManager {
     private fun showUpdateDialog(context: Context) {
         val downloadDirectory =
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        val apkFile = File(downloadDirectory, "update.apk")
+        val apkFile = File(downloadDirectory, "yuzu.apk")
 
         AlertDialog.Builder(context)
             .setTitle("有新版本可用")
@@ -142,7 +142,7 @@ object UpdateManager {
 
     private fun installUpdate(context: Context, apkFile: File) {
         val uri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            FileProvider.getUriForFile(context, context.packageName + ".provider", apkFile)
+            FileProvider.getUriForFile(context, "${context.packageName}.provider", apkFile)
         } else {
             Uri.fromFile(apkFile)
         }
