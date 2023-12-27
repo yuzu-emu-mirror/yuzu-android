@@ -7,15 +7,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Environment
-import android.provider.Settings
 import android.widget.Toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import org.json.JSONException
 import org.json.JSONObject
 import java.io.BufferedReader
-import java.io.IOException
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
@@ -98,7 +95,7 @@ class UpdateManager(private val context: Context) {
             .setNegativeButton("稍后", null)
             .show()
     }
-    
+
     private fun showNoUpdateAvailableMessage() {
         Toast.makeText(context, "您的应用已经是最新版本。", Toast.LENGTH_SHORT).show()
     }
