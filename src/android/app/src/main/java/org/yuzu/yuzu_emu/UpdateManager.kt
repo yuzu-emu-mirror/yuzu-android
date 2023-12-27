@@ -12,7 +12,6 @@ import kotlinx.coroutines.*
 import okhttp3.*
 import org.json.JSONObject
 import java.io.*
-import java.net.URL
 
 object UpdateManager {
 
