@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12466](https://github.com/yuzu-emu/yuzu//pull/12466) | [`ddda76f9b`](https://github.com/yuzu-emu/yuzu//pull/12466/files) |  core: track separate heap allocation for linux  | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12479](https://github.com/yuzu-emu/yuzu//pull/12479) | [`20e040723`](https://github.com/yuzu-emu/yuzu//pull/12479/files) | video_core: Fix buffer_row_length for linear compressed textures | [GPUCode](https://github.com/GPUCode/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
