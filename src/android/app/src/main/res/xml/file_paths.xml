@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- 配置可以访问外部存储中的 Download 目录下的文件 -->
-    <external-path name="my_external_downloads" path="Download/" />
+<paths>
+    <external-path
+        name="external_download"
+        path="Download/" />
 </paths>
