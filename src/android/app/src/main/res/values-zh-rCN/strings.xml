@@ -34,6 +34,7 @@
     <string name="empty_gamelist">找不到游戏，或者尚未选择游戏文件夹。</string>
     <string name="search_and_filter_games">搜索游戏</string>
     <string name="select_games_folder">选择游戏文件夹</string>
+    <string name="manage_game_folders">管理游戏文件夹</string>
     <string name="select_games_folder_description">允许 yuzu 填充游戏列表</string>
     <string name="add_games_warning">跳过选择游戏文件夹？</string>
     <string name="add_games_warning_description">如果未选择游戏文件夹，游戏将不会显示在游戏列表中。</string>
@@ -68,6 +69,7 @@
     <string name="invalid_keys_error">无效的加密密钥</string>
     <string name="dumping_keys_quickstart_link">https://yuzu-emu.org/help/quickstart/#dumping-decryption-keys</string>
     <string name="install_keys_failure_description">选择的密钥文件不正确或已损坏。请重新转储密钥文件。</string>
+    <string name="gpu_driver_manager">GPU 驱动管理</string>
     <string name="install_gpu_driver">安装 GPU 驱动</string>
     <string name="install_gpu_driver_description">安装替代的驱动程序以获得更好的性能和精度</string>
     <string name="advanced_settings">高级选项</string>
@@ -85,6 +87,8 @@
     <string name="notification_no_directory_link_description">请使用文件管理器的侧部面板手动定位用户文件夹。</string>
     <string name="manage_save_data">管理存档数据</string>
     <string name="manage_save_data_description">已找到存档数据，请选择下方的选项。</string>
+    <string name="import_save_warning">导入存档</string>
+    <string name="import_save_warning_description">这将使用提供的文件覆盖所有现有的存档数据。您确定要继续吗？</string>
     <string name="import_export_saves_description">导入或导出存档</string>
     <string name="save_file_imported_success">已成功导入存档</string>
     <string name="save_file_invalid_zip_structure">无效的存档目录</string>
@@ -118,6 +122,29 @@
     <string name="manage_yuzu_data_description">导入/导出固件、密钥、用户数据及其他。</string>
     <string name="share_save_file">分享存档文件</string>
     <string name="export_save_failed">导出存档文件失败</string>
+    <string name="game_folders">游戏文件夹</string>
+    <string name="deep_scan">深度扫描</string>
+    <string name="add_game_folder">添加游戏文件夹</string>
+    <string name="folder_already_added">此文件夹已被添加!</string>
+    <string name="game_folder_properties">游戏文件夹属性</string>
+
+    <!-- Applet launcher strings -->
+    <string name="applets">Applet启动器</string>
+    <string name="applets_description">使用已安装固件启动系统小程序</string>
+    <string name="applets_error_firmware">固件未安装</string>
+    <string name="applets_error_applet">小程序不可用</string>
+    <string name="applets_error_description"><![CDATA[请确保你的 <a href="https://yuzu-emu.org/help/quickstart/#dumping-prodkeys-and-titlekeys">prod.keys</a> 密钥文件和<a href="https://yuzu-emu.org/help/quickstart/#dumping-system-firmware">固件</a>是否安装并重新尝试一次.]]></string>
+    <string name="album_applet">相册</string>
+    <string name="album_applet_description">使用系统照片查看器查看存储在用户屏幕截图文件夹中的图像</string>
+    <string name="mii_edit_applet">Mii 编辑</string>
+    <string name="mii_edit_applet_description">使用系统编辑器查看和编辑 Miis</string>
+    <string name="cabinet_applet">Cabinet</string>
+    <string name="cabinet_applet_description">编辑和删除存储在amiibo上的数据</string>
+    <string name="cabinet_launcher">Cabinet 启动器</string>
+    <string name="cabinet_nickname_and_owner">昵称和所有者设置</string>
+    <string name="cabinet_game_data_eraser">游戏数据清除</string>
+    <string name="cabinet_restorer">恢复</string>
+    <string name="cabinet_formatter">格式化</string>
 
     <!-- About screen strings -->
     <string name="gaia_is_not_real">Gaia 不真实</string>
@@ -161,6 +188,7 @@
     <string name="frame_limit_enable_description">将运行速度限制为正常速度的指定百分比。</string>
     <string name="frame_limit_slider">限制速度百分比</string>
     <string name="frame_limit_slider_description">指定限制运行速度的百分比。100% 为正常速度。更高或更低的值将增加或降低速度限制上限。</string>
+    <string name="cpu_backend">CPU 后端</string>
     <string name="cpu_accuracy">CPU 精度</string>
     <string name="value_with_units">%1$s%2$s</string>
 
@@ -200,7 +228,7 @@
     <string name="renderer_api">API</string>
     <string name="renderer_debug">图形调试</string>
     <string name="renderer_debug_description">将图形 API 设置为较慢的调试模式。</string>
-    <string name="fastmem">Fastmem</string>
+    <string name="fastmem">快速内存访问</string>
 
     <!-- Audio settings strings -->
     <string name="audio_output_engine">输出引擎</string>
@@ -217,8 +245,9 @@
     <string name="shutting_down">正在关闭…</string>
     <string name="reset_setting_confirmation">您要将此设定重设为默认值吗？</string>
     <string name="reset_to_default">恢复默认</string>
+    <string name="reset_to_default_description">重置所有高级选项</string>
     <string name="reset_all_settings">重置所有设置项？</string>
-    <string name="reset_all_settings_description">所有高级选项都将被重设，此动作无法还原。</string>
+    <string name="reset_all_settings_description">所有高级选项都将被重置，此操作无法还原。</string>
     <string name="settings_reset">重设设置项</string>
     <string name="close">关闭</string>
     <string name="learn_more">了解更多</string>
@@ -230,6 +259,15 @@
     <string name="export_failed">导出失败</string>
     <string name="import_failed">导入失败</string>
     <string name="cancelling">取消中</string>
+    <string name="install">安装</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="export_success">导出成功</string>
+    <string name="start">开始</string>
+    <string name="clear">取消</string>
+    <string name="global">全局设置</string>
+    <string name="custom">自定义设置</string>
+    <string name="notice">注意</string>
 
     <!-- GPU driver installation -->
     <string name="select_gpu_driver">选择 GPU 驱动程序</string>
@@ -245,10 +283,52 @@
     <string name="preferences_settings">设置</string>
     <string name="preferences_general">通用</string>
     <string name="preferences_system">系统</string>
+    <string name="preferences_system_description">底座模式, 区域, 语言</string>
     <string name="preferences_graphics">图形</string>
+    <string name="preferences_graphics_description">精度等级, 分辨率, 着色器缓存</string>
     <string name="preferences_audio">声音</string>
+    <string name="preferences_audio_description">输出引擎, 音量</string>
     <string name="preferences_theme">主题和色彩</string>
     <string name="preferences_debug">调试</string>
+    <string name="preferences_debug_description">CPU/GPU 调试, 图形 API, 快速内存访问</string>
+
+    <!-- Game properties -->
+    <string name="info">详细信息</string>
+    <string name="info_description">游戏编号, 开发人员, 版本</string>
+    <string name="per_game_settings">此游戏设置</string>
+    <string name="per_game_settings_description">编辑特定于此游戏的设置</string>
+    <string name="launch_options">启动选项</string>
+    <string name="path">路径</string>
+    <string name="program_id">游戏编号</string>
+    <string name="developer">开发人员</string>
+    <string name="version">版本</string>
+    <string name="copy_details">复制详细信息</string>
+    <string name="add_ons">附加组件</string>
+    <string name="add_ons_description">切换模组, 升级补丁和DLC</string>
+    <string name="clear_shader_cache">删除着色器缓存</string>
+    <string name="clear_shader_cache_description">删除在玩此游戏时构建的所有着色器缓存</string>
+    <string name="clear_shader_cache_warning_description">当着色器缓存重新生成时，您将遇到更多的卡顿</string>
+    <string name="cleared_shaders_successfully">成功删除着色器缓存</string>
+    <string name="addons_game">附加组件: %1$s</string>
+    <string name="save_data">存档数据</string>
+    <string name="save_data_description">管理特定于此游戏的存档数据</string>
+    <string name="delete_save_data">删除存档</string>
+    <string name="delete_save_data_description">删除所有特定于此游戏的存档数据</string>
+    <string name="delete_save_data_warning_description">这将不可恢复地删除此游戏的所有存档数据。您确定要继续吗？</string>
+    <string name="save_data_deleted_successfully">成功删除存档</string>
+    <string name="select_content_type">内容类型</string>
+    <string name="updates_and_dlc">更新补丁和DLC</string>
+    <string name="mods_and_cheats">模组和作弊器</string>
+    <string name="addon_notice">重要组件提示</string>
+    <!-- "cheats/" "romfs/" and "exefs/ should not be translated -->
+    <string name="addon_notice_description">为了安装 mod 和 cheats，您必须选择一个包含 cheats/、romfs/ 或 exefs/ 目录的文件夹。我们无法验证这些是否与您的游戏兼容，因此请小心!</string>
+    <string name="invalid_directory">目录无效</string>
+    <!-- "cheats/" "romfs/" and "exefs/ should not be translated -->
+    <string name="invalid_directory_description">请确保您选择的目录包含 cheats/、romfs/ 或 exefs/ 文件夹，然后重试</string>
+    <string name="addon_installed_successfully">附加组件安装成功</string>
+    <string name="verifying_content">正在验证内容...</string>
+    <string name="content_install_notice">内容安装提示</string>
+    <string name="content_install_notice_description">您选择的内容与此游戏不匹配\n仍然安装？</string>
 
     <!-- ROM loading errors -->
     <string name="loader_error_encrypted">您的 ROM 已加密</string>
@@ -363,6 +443,10 @@
     <string name="ratio_force_sixteen_ten">强制 16:10</string>
     <string name="ratio_stretch">拉伸窗口</string>
 
+    <!-- CPU Backend -->
+    <string name="cpu_backend_dynarmic">动态 (慢速)</string>
+    <string name="cpu_backend_nce">本机代码执行 (NCE)</string>
+
     <!-- CPU Accuracy -->
     <string name="cpu_accuracy_accurate">高精度</string>
     <string name="cpu_accuracy_unsafe">低精度</string>
@@ -407,5 +491,4 @@
 
     <!-- Licenses screen strings -->
     <string name="licenses">许可证</string>
-    <string name="license_fidelityfx_fsr_description">来自 AMD 的高品质画质升级</string>
     </resources>
