@@ -63,7 +63,8 @@ class MainActivity : AppCompatActivity(), ThemeProvider {
     override var themeId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        UpdateManager.checkAndInstallUpdate(this, downloadUrl)
+        val updateManager = UpdateManager(this)
+        updateManager.checkForUpdates()
         val splashScreen = installSplashScreen()
         splashScreen.setKeepOnScreenCondition { !DirectoryInitialization.areDirectoriesReady }
 
