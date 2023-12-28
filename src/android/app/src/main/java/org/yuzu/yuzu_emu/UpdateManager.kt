@@ -147,16 +147,21 @@ object UpdateManager {
         Uri.fromFile(apkFile)
     }
 
-    val installIntent = Intent(Intent.ACTION_VIEW)
-    installIntent.setDataAndType(uri, "application/vnd.android.package-archive")
+    val installIntent = Intent(Intent.ACTION_INSTALL_PACKAGE)
+    installIntent.data = uri
     installIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
     installIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
-    try {
+    // 添加此标志来启用AppInstallAuthentication
+    installIntent.putExtra(Intent.EXTRA_INSTALLER_PACKAGE_NAME, context.packageName)
+
+    // 需要检查是否具有安装权限
+    if (context.packageManager.canRequestPackageInstalls()) {
         context.startActivity(installIntent)
-    } catch (e: ActivityNotFoundException) {
-        // 如果没有适合的应用程序来处理安装操作，你可以在此处处理异常
-        Log.e("UpdateManager", "没有适合的应用程序来处理安装操作: ${e.message}")
-        // 可以显示一个提示消息给用户，告诉他们手动安装
+    } else {
+        // 如果没有安装权限，则需要请求权限
+        val installPermissionIntent = Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES)
+        installPermissionIntent.data = Uri.parse("package:${context.packageName}")
+        context.startActivity(installPermissionIntent)
     }
     }
