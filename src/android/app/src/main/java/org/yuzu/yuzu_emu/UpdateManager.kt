@@ -141,17 +141,22 @@ object UpdateManager {
     }
 
     private fun installUpdate(context: Context, apkFile: File) {
-        val uri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            FileProvider.getUriForFile(context, "${context.packageName}.provider", apkFile)
-        } else {
-            Uri.fromFile(apkFile)
-        }
-
-        val installIntent = Intent(Intent.ACTION_INSTALL_PACKAGE)
-        installIntent.data = uri
-        installIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        installIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-
-        context.startActivity(installIntent)
+    val uri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        FileProvider.getUriForFile(context, "${context.packageName}.provider", apkFile)
+    } else {
+        Uri.fromFile(apkFile)
     }
-}
+
+    val installIntent = Intent(Intent.ACTION_VIEW)
+    installIntent.setDataAndType(uri, "application/vnd.android.package-archive")
+    installIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    installIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+
+    try {
+        context.startActivity(installIntent)
+    } catch (e: ActivityNotFoundException) {
+        // 如果没有适合的应用程序来处理安装操作，你可以在此处处理异常
+        Log.e("UpdateManager", "没有适合的应用程序来处理安装操作: ${e.message}")
+        // 可以显示一个提示消息给用户，告诉他们手动安装
+    }
+    }
