@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12454](https://github.com/yuzu-emu/yuzu//pull/12454) | [`3a4e7d45f`](https://github.com/yuzu-emu/yuzu//pull/12454/files) |  core_timing: minor refactors | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12466](https://github.com/yuzu-emu/yuzu//pull/12466) | [`adb2af0a2`](https://github.com/yuzu-emu/yuzu//pull/12466/files) |  core: track separate heap allocation for linux  | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12501](https://github.com/yuzu-emu/yuzu//pull/12501) | [`d1c99c5d5`](https://github.com/yuzu-emu/yuzu//pull/12501/files) | ips_layer: prevent out of bounds access with offset exceeding module size | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12513](https://github.com/yuzu-emu/yuzu//pull/12513) | [`558192abf`](https://github.com/yuzu-emu/yuzu//pull/12513/files) | jit: use code memory handles correctly | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12518](https://github.com/yuzu-emu/yuzu//pull/12518) | [`aa4d15594`](https://github.com/yuzu-emu/yuzu//pull/12518/files) | android: Migrate remaining settings to ini | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
