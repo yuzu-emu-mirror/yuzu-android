@@ -1,3 +1,14 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12549](https://github.com/yuzu-emu/yuzu//pull/12549) | [`27259ff10`](https://github.com/yuzu-emu/yuzu//pull/12549/files) | service: hid: Implement NpadResource and NpadData | [german77](https://github.com/german77/) | Yes |
+| [12557](https://github.com/yuzu-emu/yuzu//pull/12557) | [`0f7fc9411`](https://github.com/yuzu-emu/yuzu//pull/12557/files) | KThread: Send termination interrupt to all cores a thread has affinity to | [merryhime](https://github.com/merryhime/) | Yes |
+| [12558](https://github.com/yuzu-emu/yuzu//pull/12558) | [`dace726d0`](https://github.com/yuzu-emu/yuzu//pull/12558/files) | android: Disable compression for zip exports | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
