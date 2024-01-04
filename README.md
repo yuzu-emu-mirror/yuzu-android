@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12549](https://github.com/yuzu-emu/yuzu//pull/12549) | [`d3531b682`](https://github.com/yuzu-emu/yuzu//pull/12549/files) | service: hid: Implement NpadResource and NpadData | [german77](https://github.com/german77/) | Yes |
+| [12557](https://github.com/yuzu-emu/yuzu//pull/12557) | [`0f7fc9411`](https://github.com/yuzu-emu/yuzu//pull/12557/files) | KThread: Send termination interrupt to all cores a thread has affinity to | [merryhime](https://github.com/merryhime/) | Yes |
+| [12558](https://github.com/yuzu-emu/yuzu//pull/12558) | [`dace726d0`](https://github.com/yuzu-emu/yuzu//pull/12558/files) | android: Disable compression for zip exports | [t895](https://github.com/t895/) | Yes |
+| [12560](https://github.com/yuzu-emu/yuzu//pull/12560) | [`e5de3d5a7`](https://github.com/yuzu-emu/yuzu//pull/12560/files) | android: add basic support for google game dashboard | [GayPotatoEmma](https://github.com/GayPotatoEmma/) | Yes |
+| [12571](https://github.com/yuzu-emu/yuzu//pull/12571) | [`48e5e4fd1`](https://github.com/yuzu-emu/yuzu//pull/12571/files) | android: Expose more orientation options | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
