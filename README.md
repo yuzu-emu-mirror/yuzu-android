@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12560](https://github.com/yuzu-emu/yuzu-android//pull/12560) | [`e5de3d5a7`](https://github.com/yuzu-emu/yuzu-android//pull/12560/files) | android: add basic support for google game dashboard | [GayPotatoEmma](https://github.com/GayPotatoEmma/) | Yes |
+| [12576](https://github.com/yuzu-emu/yuzu-android//pull/12576) | [`53d4dbacf`](https://github.com/yuzu-emu/yuzu-android//pull/12576/files) | android: Re-add global save manager | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
