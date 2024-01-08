@@ -10,21 +10,48 @@
 
 #include "core/hle/service/nvdrv/nvdata.h"
 
+namespace Kernel {
+class KProcess;
+}
+
 namespace Tegra::Host1x {
 class Host1x;
 } // namespace Tegra::Host1x
 
 namespace Service::Nvidia::NvCore {
 
+class HeapMapper;
 class NvMap;
 class SyncpointManager;
 
 struct ContainerImpl;
 
+struct Session {
+    Session(size_t id_, Kernel::KProcess* process_, size_t smmu_id_);
+    ~Session();
+
+    Session(const Session&) = delete;
+    Session& operator=(const Session&) = delete;
+    Session(Session&&) = default;
+    Session& operator=(Session&&) = default;
+
+    size_t id;
+    Kernel::KProcess* process;
+    size_t smmu_id;
+    bool has_preallocated_area{};
+    std::unique_ptr<HeapMapper> mapper{};
+    bool is_active{};
+};
+
 class Container {
 public:
     explicit Container(Tegra::Host1x::Host1x& host1x);
     ~Container();
+
+    size_t OpenSession(Kernel::KProcess* process);
+    void CloseSession(size_t id);
+
+    Session* GetSession(size_t id);
 
     NvMap& GetNvMapFile();
 

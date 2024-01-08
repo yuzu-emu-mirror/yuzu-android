@@ -41,6 +41,8 @@ class KernelCore;
 class KHandleTable;
 class KProcess;
 class KServerSession;
+template <typename T>
+class KScopedAutoObject;
 class KThread;
 } // namespace Kernel
 
