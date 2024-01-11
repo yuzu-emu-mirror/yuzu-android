@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12579](https://github.com/yuzu-emu/yuzu-android//pull/12579) | [`66ae60a9e`](https://github.com/yuzu-emu/yuzu-android//pull/12579/files) | Core: Implement Device Mapping & GPU SMMU | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12610](https://github.com/yuzu-emu/yuzu-android//pull/12610) | [`200b371d1`](https://github.com/yuzu-emu/yuzu-android//pull/12610/files) | server_manager: respond to session close correctly | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12611](https://github.com/yuzu-emu/yuzu-android//pull/12611) | [`642a29923`](https://github.com/yuzu-emu/yuzu-android//pull/12611/files) | kernel: fix resource management issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12612](https://github.com/yuzu-emu/yuzu-android//pull/12612) | [`417df3b6e`](https://github.com/yuzu-emu/yuzu-android//pull/12612/files) | fsp-srv: use program registry for SetCurrentProcess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12642](https://github.com/yuzu-emu/yuzu-android//pull/12642) | [`4037afea1`](https://github.com/yuzu-emu/yuzu-android//pull/12642/files) | android: Refactor list adapters | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
