@@ -1,3 +1,17 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12579](https://github.com/yuzu-emu/yuzu-android//pull/12579) | [`66ae60a9e`](https://github.com/yuzu-emu/yuzu-android//pull/12579/files) | Core: Implement Device Mapping & GPU SMMU | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12610](https://github.com/yuzu-emu/yuzu-android//pull/12610) | [`200b371d1`](https://github.com/yuzu-emu/yuzu-android//pull/12610/files) | server_manager: respond to session close correctly | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12611](https://github.com/yuzu-emu/yuzu-android//pull/12611) | [`2f0b57ca1`](https://github.com/yuzu-emu/yuzu-android//pull/12611/files) | kernel: fix resource management issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12612](https://github.com/yuzu-emu/yuzu-android//pull/12612) | [`76880b84f`](https://github.com/yuzu-emu/yuzu-android//pull/12612/files) | fsp-srv: use program registry for SetCurrentProcess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12652](https://github.com/yuzu-emu/yuzu-android//pull/12652) | [`2a0d707ce`](https://github.com/yuzu-emu/yuzu-android//pull/12652/files) | shader_recompiler: emulate 8-bit and 16-bit storage writes with cas loop | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12659](https://github.com/yuzu-emu/yuzu-android//pull/12659) | [`d94097478`](https://github.com/yuzu-emu/yuzu-android//pull/12659/files) | audio: fetch process object from handle table | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
