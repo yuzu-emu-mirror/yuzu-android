@@ -12,6 +12,7 @@
 #include "common/common_types.h"
 #include "common/logging/log.h"
 #include "common/scratch_buffer.h"
+#include "core/guest_memory.h"
 #include "core/hle/kernel/k_auto_object.h"
 #include "core/hle/kernel/k_handle_table.h"
 #include "core/hle/kernel/k_process.h"
@@ -344,9 +345,9 @@ std::vector<u8> HLERequestContext::ReadBufferCopy(std::size_t buffer_index) cons
 
 std::span<const u8> HLERequestContext::ReadBufferA(std::size_t buffer_index) const {
     static thread_local std::array read_buffer_a{
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
     };
 
     ASSERT_OR_EXECUTE_MSG(
@@ -360,9 +361,9 @@ std::span<const u8> HLERequestContext::ReadBufferA(std::size_t buffer_index) con
 
 std::span<const u8> HLERequestContext::ReadBufferX(std::size_t buffer_index) const {
     static thread_local std::array read_buffer_x{
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
     };
 
     ASSERT_OR_EXECUTE_MSG(
@@ -376,14 +377,14 @@ std::span<const u8> HLERequestContext::ReadBufferX(std::size_t buffer_index) con
 
 std::span<const u8> HLERequestContext::ReadBuffer(std::size_t buffer_index) const {
     static thread_local std::array read_buffer_a{
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
     };
     static thread_local std::array read_buffer_x{
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
-        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::SafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
+        Core::Memory::CpuGuestMemory<u8, Core::Memory::GuestMemoryFlags::UnsafeRead>(memory, 0, 0),
     };
 
     const bool is_buffer_a{BufferDescriptorA().size() > buffer_index &&
