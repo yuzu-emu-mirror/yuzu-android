@@ -11,6 +11,8 @@
 #include "core/guest_memory.h"
 #include "core/memory.h"
 
+#include "core/hle/kernel/k_process.h"
+
 namespace AudioCore {
 
 using namespace std::literals;
@@ -26,7 +28,7 @@ DeviceSession::~DeviceSession() {
 }
 
 Result DeviceSession::Initialize(std::string_view name_, SampleFormat sample_format_,
-                                 u16 channel_count_, size_t session_id_, u32 handle_,
+                                 u16 channel_count_, size_t session_id_, Kernel::KProcess* handle_,
                                  u64 applet_resource_user_id_, Sink::StreamType type_) {
     if (stream) {
         Finalize();
@@ -37,6 +39,7 @@ Result DeviceSession::Initialize(std::string_view name_, SampleFormat sample_for
     channel_count = channel_count_;
     session_id = session_id_;
     handle = handle_;
+    handle->Open();
     applet_resource_user_id = applet_resource_user_id_;
 
     if (type == Sink::StreamType::In) {
@@ -54,6 +57,11 @@ void DeviceSession::Finalize() {
         Stop();
         sink->CloseStream(stream);
         stream = nullptr;
+    }
+
+    if (handle) {
+        handle->Close();
+        handle = nullptr;
     }
 }
 
@@ -92,7 +100,7 @@ void DeviceSession::AppendBuffers(std::span<const AudioBuffer> buffers) {
             stream->AppendBuffer(new_buffer, tmp_samples);
         } else {
             Core::Memory::CpuGuestMemory<s16, Core::Memory::GuestMemoryFlags::UnsafeRead> samples(
-                system.ApplicationMemory(), buffer.samples, buffer.size / sizeof(s16));
+                handle->GetMemory(), buffer.samples, buffer.size / sizeof(s16));
             stream->AppendBuffer(new_buffer, samples);
         }
     }
@@ -101,7 +109,7 @@ void DeviceSession::AppendBuffers(std::span<const AudioBuffer> buffers) {
 void DeviceSession::ReleaseBuffer(const AudioBuffer& buffer) const {
     if (type == Sink::StreamType::In) {
         auto samples{stream->ReleaseBuffer(buffer.size / sizeof(s16))};
-        system.ApplicationMemory().WriteBlockUnsafe(buffer.samples, samples.data(), buffer.size);
+        handle->GetMemory().WriteBlockUnsafe(buffer.samples, samples.data(), buffer.size);
     }
 }
 
