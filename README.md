@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12579](https://github.com/yuzu-emu/yuzu-android//pull/12579) | [`66ae60a9e`](https://github.com/yuzu-emu/yuzu-android//pull/12579/files) | Core: Implement Device Mapping & GPU SMMU | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12644](https://github.com/yuzu-emu/yuzu-android//pull/12644) | [`2044a289f`](https://github.com/yuzu-emu/yuzu-android//pull/12644/files) | shader_recompiler: fix Offset operand usage for non-OpImage*Gather | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
