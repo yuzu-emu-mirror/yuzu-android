@@ -194,6 +194,7 @@ async function resetBranch(execa) {
         await execa("git", ["reset", "--hard", headCommit]);
     } catch (err) {
         console.log(`::error title=Failed to reset master branch`);
+        console.log(err)
         hasFailed = true;
     }
     console.log("::endgroup::");
