@@ -187,7 +187,7 @@ async function resetBranch(execa) {
     let hasFailed = false;
     try {
         await execa("git", ["remote", "add", "source", "https://github.com/yuzu-emu/yuzu.git"]);
-        await execa("git", ["fetch", "source"]);
+        await execa("git", ["fetch","--no-recurse-submodules", "source"]);
         const process1 = await execa("git", ["rev-parse", "source/master"]);
         const headCommit = process1.stdout;
 
