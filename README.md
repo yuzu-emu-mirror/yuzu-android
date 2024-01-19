@@ -1,3 +1,19 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12579](https://github.com/yuzu-emu/yuzu-android//pull/12579) | [`93ef41f03`](https://github.com/yuzu-emu/yuzu-android//pull/12579/files) | Core: Implement Device Mapping & GPU SMMU | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12644](https://github.com/yuzu-emu/yuzu-android//pull/12644) | [`2044a289f`](https://github.com/yuzu-emu/yuzu-android//pull/12644/files) | shader_recompiler: fix Offset operand usage for non-OpImage*Gather | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12660](https://github.com/yuzu-emu/yuzu-android//pull/12660) | [`2cacb9d48`](https://github.com/yuzu-emu/yuzu-android//pull/12660/files) | service: hid: Fully implement abstract vibration | [german77](https://github.com/german77/) | Yes |
+| [12678](https://github.com/yuzu-emu/yuzu-android//pull/12678) | [`7f5adf898`](https://github.com/yuzu-emu/yuzu-android//pull/12678/files) | service: set: Implement stubbed functions | [german77](https://github.com/german77/) | Yes |
+| [12683](https://github.com/yuzu-emu/yuzu-android//pull/12683) | [`c661b9586`](https://github.com/yuzu-emu/yuzu-android//pull/12683/files) | service: nfc: Create backup when none exist | [german77](https://github.com/german77/) | Yes |
+| [12687](https://github.com/yuzu-emu/yuzu-android//pull/12687) | [`0b0e9ef18`](https://github.com/yuzu-emu/yuzu-android//pull/12687/files) | core: hid: Disable special features before disconnecting the controllers | [german77](https://github.com/german77/) | Yes |
+| [12688](https://github.com/yuzu-emu/yuzu-android//pull/12688) | [`e9eb017aa`](https://github.com/yuzu-emu/yuzu-android//pull/12688/files) | renderer_vulkan: recreate swapchain when frame size changes | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12701](https://github.com/yuzu-emu/yuzu-android//pull/12701) | [`e4bbb24dc`](https://github.com/yuzu-emu/yuzu-android//pull/12701/files) |  vi: check layer state before opening or closing | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
