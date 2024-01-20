@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12579](https://github.com/yuzu-emu/yuzu-android//pull/12579) | [`748465f5a`](https://github.com/yuzu-emu/yuzu-android//pull/12579/files) | Core: Implement Device Mapping & GPU SMMU | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12660](https://github.com/yuzu-emu/yuzu-android//pull/12660) | [`2cacb9d48`](https://github.com/yuzu-emu/yuzu-android//pull/12660/files) | service: hid: Fully implement abstract vibration | [german77](https://github.com/german77/) | Yes |
+| [12688](https://github.com/yuzu-emu/yuzu-android//pull/12688) | [`e9eb017aa`](https://github.com/yuzu-emu/yuzu-android//pull/12688/files) | renderer_vulkan: recreate swapchain when frame size changes | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12701](https://github.com/yuzu-emu/yuzu-android//pull/12701) | [`e4bbb24dc`](https://github.com/yuzu-emu/yuzu-android//pull/12701/files) |  vi: check layer state before opening or closing | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12715](https://github.com/yuzu-emu/yuzu-android//pull/12715) | [`47058d705`](https://github.com/yuzu-emu/yuzu-android//pull/12715/files) | android: Add uninstall addon button | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
