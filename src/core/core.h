@@ -8,6 +8,7 @@
 #include <functional>
 #include <memory>
 #include <mutex>
+#include <span>
 #include <string>
 #include <vector>
 
@@ -112,6 +113,7 @@ class CpuManager;
 class Debugger;
 class DeviceMemory;
 class ExclusiveMonitor;
+class GPUDirtyMemoryManager;
 class PerfStats;
 class Reporter;
 class SpeedLimiter;
@@ -220,7 +222,9 @@ public:
     /// Prepare the core emulation for a reschedule
     void PrepareReschedule(u32 core_index);
 
-    void GatherGPUDirtyMemory(std::function<void(VAddr, size_t)>& callback);
+    std::span<GPUDirtyMemoryManager> GetGPUDirtyMemoryManager();
+
+    void GatherGPUDirtyMemory(std::function<void(PAddr, size_t)>& callback);
 
     [[nodiscard]] size_t GetCurrentHostThreadID() const;
 
