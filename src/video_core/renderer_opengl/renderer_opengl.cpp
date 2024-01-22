@@ -243,10 +243,12 @@ void RendererOpenGL::LoadFBToScreenInfo(const Tegra::FramebufferConfig& framebuf
     const u64 size_in_bytes{Tegra::Texture::CalculateSize(
         true, bytes_per_pixel, framebuffer.stride, framebuffer.height, 1, block_height_log2, 0)};
     const u8* const host_ptr{device_memory.GetPointer<u8>(framebuffer_addr)};
-    const std::span<const u8> input_data(host_ptr, size_in_bytes);
-    Tegra::Texture::UnswizzleTexture(gl_framebuffer_data, input_data, bytes_per_pixel,
-                                     framebuffer.width, framebuffer.height, 1, block_height_log2,
-                                     0);
+    if (host_ptr != nullptr) {
+        const std::span<const u8> input_data(host_ptr, size_in_bytes);
+        Tegra::Texture::UnswizzleTexture(gl_framebuffer_data, input_data, bytes_per_pixel,
+                                         framebuffer.width, framebuffer.height, 1,
+                                         block_height_log2, 0);
+    }
 
     glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
     glPixelStorei(GL_UNPACK_ROW_LENGTH, static_cast<GLint>(framebuffer.stride));
