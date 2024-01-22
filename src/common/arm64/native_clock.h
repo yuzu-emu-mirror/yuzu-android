@@ -11,23 +11,23 @@ class NativeClock final : public WallClock {
 public:
     explicit NativeClock();
 
+    void Reset() override;
+
     std::chrono::nanoseconds GetTimeNS() const override;
 
     std::chrono::microseconds GetTimeUS() const override;
 
     std::chrono::milliseconds GetTimeMS() const override;
 
-    u64 GetCNTPCT() const override;
+    s64 GetCNTPCT() const override;
 
-    u64 GetGPUTick() const override;
+    s64 GetGPUTick() const override;
 
-    u64 GetHostTicksNow() const override;
-
-    u64 GetHostTicksElapsed() const override;
+    s64 GetUptime() const override;
 
     bool IsNative() const override;
 
-    static u64 GetHostCNTFRQ();
+    static s64 GetHostCNTFRQ();
 
 public:
     using FactorType = unsigned __int128;
@@ -42,6 +42,7 @@ private:
     FactorType ms_cntfrq_factor;
     FactorType guest_cntfrq_factor;
     FactorType gputick_cntfrq_factor;
+    s64 start_ticks;
 };
 
 } // namespace Common::Arm64
