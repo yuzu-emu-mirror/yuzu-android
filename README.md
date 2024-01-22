@@ -1,3 +1,15 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12499](https://github.com/yuzu-emu/yuzu-android//pull/12499) | [`d95af76e7`](https://github.com/yuzu-emu/yuzu-android//pull/12499/files) | Rework time services | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12579](https://github.com/yuzu-emu/yuzu-android//pull/12579) | [`748465f5a`](https://github.com/yuzu-emu/yuzu-android//pull/12579/files) | Core: Implement Device Mapping & GPU SMMU | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12736](https://github.com/yuzu-emu/yuzu-android//pull/12736) | [`961b5586a`](https://github.com/yuzu-emu/yuzu-android//pull/12736/files) | android: Add verify contents buttons | [t895](https://github.com/t895/) | Yes |
+| [12738](https://github.com/yuzu-emu/yuzu-android//pull/12738) | [`3a25a217e`](https://github.com/yuzu-emu/yuzu-android//pull/12738/files) | android: Port "Lock drawer" feature from Citra | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
