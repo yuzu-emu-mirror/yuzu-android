@@ -615,6 +615,16 @@ object NativeLibrary {
     external fun clearFilesystemProvider()
 
     /**
+     * Checks if all necessary keys are present for decryption
+     */
+    external fun areKeysPresent(): Boolean
+
+    /**
+     * Check if the system firmware can be decrypted by checking the Mii model system archive
+     */
+    external fun canDecryptSystemArchive(): Boolean
+
+    /**
      * Button type for use in onTouchEvent
      */
     object ButtonType {
