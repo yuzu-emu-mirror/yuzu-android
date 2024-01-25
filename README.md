@@ -1,3 +1,15 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12499](https://github.com/yuzu-emu/yuzu-android//pull/12499) | [`e4915fb7d`](https://github.com/yuzu-emu/yuzu-android//pull/12499/files) | Rework time services | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`e3171486d`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12759](https://github.com/yuzu-emu/yuzu-android//pull/12759) | [`a120f8ff4`](https://github.com/yuzu-emu/yuzu-android//pull/12759/files) | core: miscellaneous fixes | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12769](https://github.com/yuzu-emu/yuzu-android//pull/12769) | [`ad4622da2`](https://github.com/yuzu-emu/yuzu-android//pull/12769/files) | core: hid: Reduce controller requests | [german77](https://github.com/german77/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
