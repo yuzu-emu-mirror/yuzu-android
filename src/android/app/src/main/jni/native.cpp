@@ -42,14 +42,15 @@
 #include "core/frontend/applets/cabinet.h"
 #include "core/frontend/applets/controller.h"
 #include "core/frontend/applets/error.h"
-#include "core/frontend/applets/general_frontend.h"
+#include "core/frontend/applets/general.h"
 #include "core/frontend/applets/mii_edit.h"
 #include "core/frontend/applets/profile_select.h"
 #include "core/frontend/applets/software_keyboard.h"
 #include "core/frontend/applets/web_browser.h"
 #include "core/hle/service/am/applet_ae.h"
+#include "core/hle/service/am/applet_manager.h"
 #include "core/hle/service/am/applet_oe.h"
-#include "core/hle/service/am/applets/applets.h"
+#include "core/hle/service/am/frontend/applets.h"
 #include "core/hle/service/filesystem/filesystem.h"
 #include "core/loader/loader.h"
 #include "frontend_common/config.h"
@@ -222,7 +223,7 @@ Core::SystemResultStatus EmulationSession::InitializeEmulation(const std::string
     m_system.ApplySettings();
     Settings::LogSettings();
     m_system.HIDCore().ReloadInputDevices();
-    m_system.SetAppletFrontendSet({
+    m_system.SetFrontendAppletSet({
         nullptr,                     // Amiibo Settings
         nullptr,                     // Controller Selector
         nullptr,                     // Error Display
@@ -238,7 +239,10 @@ Core::SystemResultStatus EmulationSession::InitializeEmulation(const std::string
     ConfigureFilesystemProvider(filepath);
 
     // Load the ROM.
-    m_load_result = m_system.Load(EmulationSession::GetInstance().Window(), filepath);
+    Service::AM::FrontendAppletParameters params{
+        .applet_id = Service::AM::AppletId::Application,
+    };
+    m_load_result = m_system.Load(EmulationSession::GetInstance().Window(), filepath, params);
     if (m_load_result != Core::SystemResultStatus::Success) {
         return m_load_result;
     }
@@ -755,13 +759,13 @@ jstring Java_org_yuzu_yuzu_1emu_NativeLibrary_getAppletLaunchPath(JNIEnv* env, j
 
 void Java_org_yuzu_yuzu_1emu_NativeLibrary_setCurrentAppletId(JNIEnv* env, jclass clazz,
                                                               jint jappletId) {
-    EmulationSession::GetInstance().System().GetAppletManager().SetCurrentAppletId(
-        static_cast<Service::AM::Applets::AppletId>(jappletId));
+    EmulationSession::GetInstance().System().GetFrontendAppletHolder().SetCurrentAppletId(
+        static_cast<Service::AM::AppletId>(jappletId));
 }
 
 void Java_org_yuzu_yuzu_1emu_NativeLibrary_setCabinetMode(JNIEnv* env, jclass clazz,
                                                           jint jcabinetMode) {
-    EmulationSession::GetInstance().System().GetAppletManager().SetCabinetMode(
+    EmulationSession::GetInstance().System().GetFrontendAppletHolder().SetCabinetMode(
         static_cast<Service::NFP::CabinetMode>(jcabinetMode));
 }
 
