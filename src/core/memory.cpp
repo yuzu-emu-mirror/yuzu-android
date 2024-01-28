@@ -1091,6 +1091,20 @@ bool Memory::InvalidateNCE(Common::ProcessAddress vaddr, size_t size) {
         [&] { rasterizer = true; });
     if (rasterizer) {
         impl->InvalidateGPUMemory(ptr, size);
+
+        const auto type = impl->current_page_table->pointers[vaddr >> YUZU_PAGEBITS].Type();
+        if (type == Common::PageType::RasterizerCachedMemory) {
+            // Check if device mapped. If not, this bugged and we can unmark.
+            DAddr addr{};
+            Common::ScratchBuffer<u32> buffer;
+            impl->gpu_device_memory->ApplyOpOnPointer(ptr, buffer,
+                                                      [&](DAddr address) { addr = address; });
+
+            if (addr == 0) {
+                LOG_ERROR(HW_Memory, "Fixing unmapped cached region {:#x}", GetInteger(vaddr));
+                impl->RasterizerMarkRegionCached(GetInteger(vaddr), size, false);
+            }
+        }
     }
 
 #ifdef __linux__
