@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`e3171486d`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12760](https://github.com/yuzu-emu/yuzu-android//pull/12760) | [`53f17ede1`](https://github.com/yuzu-emu/yuzu-android//pull/12760/files) | am: rewrite for multiprocess support | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12802](https://github.com/yuzu-emu/yuzu-android//pull/12802) | [`c5e88c654`](https://github.com/yuzu-emu/yuzu-android//pull/12802/files) | service: mii: Migrate service to new interface | [german77](https://github.com/german77/) | Yes |
+| [12826](https://github.com/yuzu-emu/yuzu-android//pull/12826) | [`2d8f80b65`](https://github.com/yuzu-emu/yuzu-android//pull/12826/files) | android: Show system driver information | [t895](https://github.com/t895/) | Yes |
+| [12827](https://github.com/yuzu-emu/yuzu-android//pull/12827) | [`c770af9b1`](https://github.com/yuzu-emu/yuzu-android//pull/12827/files) | android: Disable focus on loading card | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
