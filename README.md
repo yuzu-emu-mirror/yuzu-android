@@ -1,3 +1,15 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`e3171486d`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12760](https://github.com/yuzu-emu/yuzu-android//pull/12760) | [`c6b88b62d`](https://github.com/yuzu-emu/yuzu-android//pull/12760/files) | am: rewrite for multiprocess support | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12814](https://github.com/yuzu-emu/yuzu-android//pull/12814) | [`da410506a`](https://github.com/yuzu-emu/yuzu-android//pull/12814/files) | Move time services to new IPC and add debug printing | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12830](https://github.com/yuzu-emu/yuzu-android//pull/12830) | [`6cc82fd43`](https://github.com/yuzu-emu/yuzu-android//pull/12830/files) | externals/dynarmic: Update to 6.6.1 | [merryhime](https://github.com/merryhime/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
