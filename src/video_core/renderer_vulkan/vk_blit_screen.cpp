@@ -230,9 +230,11 @@ void BlitScreen::Draw(const Tegra::FramebufferConfig& framebuffer,
         const u64 tiled_size{Tegra::Texture::CalculateSize(true, bytes_per_pixel,
                                                            framebuffer.stride, framebuffer.height,
                                                            1, block_height_log2, 0)};
-        Tegra::Texture::UnswizzleTexture(
-            mapped_span.subspan(image_offset, linear_size), std::span(host_ptr, tiled_size),
-            bytes_per_pixel, framebuffer.width, framebuffer.height, 1, block_height_log2, 0);
+        if (host_ptr != nullptr) {
+            Tegra::Texture::UnswizzleTexture(
+                mapped_span.subspan(image_offset, linear_size), std::span(host_ptr, tiled_size),
+                bytes_per_pixel, framebuffer.width, framebuffer.height, 1, block_height_log2, 0);
+        }
 
         const VkBufferImageCopy copy{
             .bufferOffset = image_offset,
