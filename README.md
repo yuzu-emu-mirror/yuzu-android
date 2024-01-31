@@ -1,3 +1,18 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12760](https://github.com/yuzu-emu/yuzu-android//pull/12760) | [`817d91623`](https://github.com/yuzu-emu/yuzu-android//pull/12760/files) | am: rewrite for multiprocess support | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12858](https://github.com/yuzu-emu/yuzu-android//pull/12858) | [`5510b3197`](https://github.com/yuzu-emu/yuzu-android//pull/12858/files) | internal_network: only poll for accept on blocking sockets | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12864](https://github.com/yuzu-emu/yuzu-android//pull/12864) | [`9ed82a280`](https://github.com/yuzu-emu/yuzu-android//pull/12864/files) | Small time fixes | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12867](https://github.com/yuzu-emu/yuzu-android//pull/12867) | [`a97ecc237`](https://github.com/yuzu-emu/yuzu-android//pull/12867/files) | aoc: fix DLC listing | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12868](https://github.com/yuzu-emu/yuzu-android//pull/12868) | [`e8be665f1`](https://github.com/yuzu-emu/yuzu-android//pull/12868/files) | settings: Allow audio sink, input, and output to be set per game | [t895](https://github.com/t895/) | Yes |
+| [12869](https://github.com/yuzu-emu/yuzu-android//pull/12869) | [`acd46c9bd`](https://github.com/yuzu-emu/yuzu-android//pull/12869/files) | SMMU: A set of different fixes. | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
