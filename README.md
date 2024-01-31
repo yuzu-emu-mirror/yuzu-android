@@ -1,3 +1,13 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`e644610e1`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12760](https://github.com/yuzu-emu/yuzu-android//pull/12760) | [`8e0a40434`](https://github.com/yuzu-emu/yuzu-android//pull/12760/files) | am: rewrite for multiprocess support | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
