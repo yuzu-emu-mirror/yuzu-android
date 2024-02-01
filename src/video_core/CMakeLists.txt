@@ -58,8 +58,8 @@ add_library(video_core STATIC
     framebuffer_config.h
     fsr.cpp
     fsr.h
-    host1x/codecs/codec.cpp
-    host1x/codecs/codec.h
+    host1x/codecs/decoder.cpp
+    host1x/codecs/decoder.h
     host1x/codecs/h264.cpp
     host1x/codecs/h264.h
     host1x/codecs/vp8.cpp
@@ -78,8 +78,6 @@ add_library(video_core STATIC
     host1x/nvdec.cpp
     host1x/nvdec.h
     host1x/nvdec_common.h
-    host1x/sync_manager.cpp
-    host1x/sync_manager.h
     host1x/syncpoint_manager.cpp
     host1x/syncpoint_manager.h
     host1x/vic.cpp

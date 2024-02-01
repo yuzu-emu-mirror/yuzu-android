@@ -232,12 +232,6 @@ public:
     /// Push GPU command entries to be processed
     void PushGPUEntries(s32 channel, Tegra::CommandList&& entries);
 
-    /// Push GPU command buffer entries to be processed
-    void PushCommandBuffer(u32 id, Tegra::ChCommandHeaderList& entries);
-
-    /// Frees the CDMAPusher instance to free up resources
-    void ClearCdmaInstance(u32 id);
-
     /// Swap buffers (render frame)
     void SwapBuffers(const Tegra::FramebufferConfig* framebuffer);
 
