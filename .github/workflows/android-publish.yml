@@ -41,7 +41,6 @@ jobs:
         if: ${{ steps.check-changes.outputs.result == 'true' }}
         with:
           path: 'yuzu-merge'
-          fetch-depth: 0
           submodules: true
           token: ${{ secrets.ALT_GITHUB_TOKEN }}
       - uses: actions/github-script@v5
