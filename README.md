@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu-android//pull/12461) | [`e1f31cfe5`](https://github.com/yuzu-emu/yuzu-android//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12848](https://github.com/yuzu-emu/yuzu-android//pull/12848) | [`4afca6bf5`](https://github.com/yuzu-emu/yuzu-android//pull/12848/files) | service: capsrv: Migrate to new IPC | [german77](https://github.com/german77/) | Yes |
+| [12874](https://github.com/yuzu-emu/yuzu-android//pull/12874) | [`f410cf681`](https://github.com/yuzu-emu/yuzu-android//pull/12874/files) | Revert "shader_recompiler: fix Offset operand usage for non-OpImage*Gather" | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12875](https://github.com/yuzu-emu/yuzu-android//pull/12875) | [`5cb9fe781`](https://github.com/yuzu-emu/yuzu-android//pull/12875/files) | SwBlitter: Fix Pitch linear reading/writting | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
