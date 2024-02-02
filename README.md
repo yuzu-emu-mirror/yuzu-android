@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12761](https://github.com/yuzu-emu/yuzu-android//pull/12761) | [`2c421a704`](https://github.com/yuzu-emu/yuzu-android//pull/12761/files) | video_core: rewrite presentation for layer composition | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12845](https://github.com/yuzu-emu/yuzu-android//pull/12845) | [`41149d061`](https://github.com/yuzu-emu/yuzu-android//pull/12845/files) | notif: rewrite for new IPC | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12857](https://github.com/yuzu-emu/yuzu-android//pull/12857) | [`35e3c6802`](https://github.com/yuzu-emu/yuzu-android//pull/12857/files) | service: use const references for input raw data | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12874](https://github.com/yuzu-emu/yuzu-android//pull/12874) | [`f410cf681`](https://github.com/yuzu-emu/yuzu-android//pull/12874/files) | Revert "shader_recompiler: fix Offset operand usage for non-OpImage*Gather" | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
