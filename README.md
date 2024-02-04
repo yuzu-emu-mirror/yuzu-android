@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu-android//pull/12461) | [`4c08a0e6d`](https://github.com/yuzu-emu/yuzu-android//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12756](https://github.com/yuzu-emu/yuzu-android//pull/12756) | [`b19285d4f`](https://github.com/yuzu-emu/yuzu-android//pull/12756/files) | general: applet multiprocess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12892](https://github.com/yuzu-emu/yuzu-android//pull/12892) | [`78f72b3bf`](https://github.com/yuzu-emu/yuzu-android//pull/12892/files) | cmif_serialization: enforce const for references | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12903](https://github.com/yuzu-emu/yuzu-android//pull/12903) | [`5be8121af`](https://github.com/yuzu-emu/yuzu-android//pull/12903/files) | shader_recompiler: use only ConstOffset for OpImageFetch | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
