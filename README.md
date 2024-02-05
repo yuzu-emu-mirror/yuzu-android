@@ -1,3 +1,20 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu-android//pull/12461) | [`4c08a0e6d`](https://github.com/yuzu-emu/yuzu-android//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu-android//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu-android//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12756](https://github.com/yuzu-emu/yuzu-android//pull/12756) | [`cd3de0848`](https://github.com/yuzu-emu/yuzu-android//pull/12756/files) | general: applet multiprocess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12873](https://github.com/yuzu-emu/yuzu-android//pull/12873) | [`023c3aa65`](https://github.com/yuzu-emu/yuzu-android//pull/12873/files) | GPU: Implement channel scheduling. | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12903](https://github.com/yuzu-emu/yuzu-android//pull/12903) | [`5be8121af`](https://github.com/yuzu-emu/yuzu-android//pull/12903/files) | shader_recompiler: use only ConstOffset for OpImageFetch | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12905](https://github.com/yuzu-emu/yuzu-android//pull/12905) | [`5eb5c9675`](https://github.com/yuzu-emu/yuzu-android//pull/12905/files) | nvnflinger: release buffers before presentation sleep | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12914](https://github.com/yuzu-emu/yuzu-android//pull/12914) | [`3a6d8ae2c`](https://github.com/yuzu-emu/yuzu-android//pull/12914/files) | VideoCore Refactor Part 1. | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12915](https://github.com/yuzu-emu/yuzu-android//pull/12915) | [`504abbd6e`](https://github.com/yuzu-emu/yuzu-android//pull/12915/files) | dmnt: cheats: Update cheat vm to latest version | [german77](https://github.com/german77/) | Yes |
+| [12920](https://github.com/yuzu-emu/yuzu-android//pull/12920) | [`62fc6d5c3`](https://github.com/yuzu-emu/yuzu-android//pull/12920/files) | android: Move JNI setup and helpers to common | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
