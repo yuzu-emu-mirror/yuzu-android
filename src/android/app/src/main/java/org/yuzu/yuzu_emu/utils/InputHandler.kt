@@ -267,10 +267,10 @@ object InputHandler {
 
     private fun getInputGenericButtonKey(key: Int): Int {
         return when (key) {
-            KeyEvent.KEYCODE_BUTTON_A -> NativeLibrary.ButtonType.BUTTON_A
-            KeyEvent.KEYCODE_BUTTON_B -> NativeLibrary.ButtonType.BUTTON_B
-            KeyEvent.KEYCODE_BUTTON_X -> NativeLibrary.ButtonType.BUTTON_X
-            KeyEvent.KEYCODE_BUTTON_Y -> NativeLibrary.ButtonType.BUTTON_Y
+            KeyEvent.KEYCODE_BUTTON_A -> NativeLibrary.ButtonType.BUTTON_B
+            KeyEvent.KEYCODE_BUTTON_B -> NativeLibrary.ButtonType.BUTTON_A
+            KeyEvent.KEYCODE_BUTTON_X -> NativeLibrary.ButtonType.BUTTON_Y
+            KeyEvent.KEYCODE_BUTTON_Y -> NativeLibrary.ButtonType.BUTTON_X
             KeyEvent.KEYCODE_DPAD_UP -> NativeLibrary.ButtonType.DPAD_UP
             KeyEvent.KEYCODE_DPAD_DOWN -> NativeLibrary.ButtonType.DPAD_DOWN
             KeyEvent.KEYCODE_DPAD_LEFT -> NativeLibrary.ButtonType.DPAD_LEFT
