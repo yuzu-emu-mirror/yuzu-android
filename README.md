@@ -1,3 +1,19 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`4c08a0e6d`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12756](https://github.com/yuzu-emu/yuzu//pull/12756) | [`cd3de0848`](https://github.com/yuzu-emu/yuzu//pull/12756/files) | general: applet multiprocess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12903](https://github.com/yuzu-emu/yuzu//pull/12903) | [`f296a9ce9`](https://github.com/yuzu-emu/yuzu//pull/12903/files) | shader_recompiler: use only ConstOffset for OpImageFetch | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12914](https://github.com/yuzu-emu/yuzu//pull/12914) | [`fa47ac1c9`](https://github.com/yuzu-emu/yuzu//pull/12914/files) | VideoCore Refactor Part 1. | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12920](https://github.com/yuzu-emu/yuzu//pull/12920) | [`62fc6d5c3`](https://github.com/yuzu-emu/yuzu//pull/12920/files) | android: Move JNI setup and helpers to common | [t895](https://github.com/t895/) | Yes |
+| [12951](https://github.com/yuzu-emu/yuzu//pull/12951) | [`fee263c59`](https://github.com/yuzu-emu/yuzu//pull/12951/files) | ipc: additional fixes | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12953](https://github.com/yuzu-emu/yuzu//pull/12953) | [`ae833aa9c`](https://github.com/yuzu-emu/yuzu//pull/12953/files) | SMMU: Ensure the backing address range matches the current | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
