@@ -1,3 +1,19 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`54eb8dcc9`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12756](https://github.com/yuzu-emu/yuzu//pull/12756) | [`cd3de0848`](https://github.com/yuzu-emu/yuzu//pull/12756/files) | general: applet multiprocess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12920](https://github.com/yuzu-emu/yuzu//pull/12920) | [`2600ac65c`](https://github.com/yuzu-emu/yuzu//pull/12920/files) | android: Move JNI setup and helpers to common | [t895](https://github.com/t895/) | Yes |
+| [12951](https://github.com/yuzu-emu/yuzu//pull/12951) | [`fee263c59`](https://github.com/yuzu-emu/yuzu//pull/12951/files) | ipc: additional fixes | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12955](https://github.com/yuzu-emu/yuzu//pull/12955) | [`8d2ad3d8f`](https://github.com/yuzu-emu/yuzu//pull/12955/files) | dmnt: cheat: Avoid invalidating cache on 32bit | [german77](https://github.com/german77/) | Yes |
+| [12964](https://github.com/yuzu-emu/yuzu//pull/12964) | [`af8736567`](https://github.com/yuzu-emu/yuzu//pull/12964/files) | android: Remove foreground service | [t895](https://github.com/t895/) | Yes |
+| [12968](https://github.com/yuzu-emu/yuzu//pull/12968) | [`87660add8`](https://github.com/yuzu-emu/yuzu//pull/12968/files) | android: Thermal throttling indicator | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
