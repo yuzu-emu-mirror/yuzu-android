@@ -1,3 +1,17 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`acc26667b`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12756](https://github.com/yuzu-emu/yuzu//pull/12756) | [`13fd37ef6`](https://github.com/yuzu-emu/yuzu//pull/12756/files) | general: applet multiprocess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12949](https://github.com/yuzu-emu/yuzu//pull/12949) | [`5a64a77df`](https://github.com/yuzu-emu/yuzu//pull/12949/files) | service: add os types and multi wait API | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12955](https://github.com/yuzu-emu/yuzu//pull/12955) | [`8d2ad3d8f`](https://github.com/yuzu-emu/yuzu//pull/12955/files) | dmnt: cheat: Avoid invalidating cache on 32bit | [german77](https://github.com/german77/) | Yes |
+| [12969](https://github.com/yuzu-emu/yuzu//pull/12969) | [`816d03f7d`](https://github.com/yuzu-emu/yuzu//pull/12969/files) | service: bcat: Migrate and refractor service to new IPC | [german77](https://github.com/german77/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
