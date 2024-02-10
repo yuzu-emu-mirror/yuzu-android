@@ -1,3 +1,18 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`acc26667b`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12756](https://github.com/yuzu-emu/yuzu//pull/12756) | [`4677fd3f6`](https://github.com/yuzu-emu/yuzu//pull/12756/files) | general: applet multiprocess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12873](https://github.com/yuzu-emu/yuzu//pull/12873) | [`1f64c9adf`](https://github.com/yuzu-emu/yuzu//pull/12873/files) | GPU: Implement channel scheduling. | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12955](https://github.com/yuzu-emu/yuzu//pull/12955) | [`8d2ad3d8f`](https://github.com/yuzu-emu/yuzu//pull/12955/files) | dmnt: cheat: Avoid invalidating cache on 32bit | [german77](https://github.com/german77/) | Yes |
+| [12978](https://github.com/yuzu-emu/yuzu//pull/12978) | [`4eeac731f`](https://github.com/yuzu-emu/yuzu//pull/12978/files) | host_shaders: add vendor workaround for adreno drivers | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12980](https://github.com/yuzu-emu/yuzu//pull/12980) | [`211544fbc`](https://github.com/yuzu-emu/yuzu//pull/12980/files) | dynarmic: Fix invalidation race | [merryhime](https://github.com/merryhime/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
