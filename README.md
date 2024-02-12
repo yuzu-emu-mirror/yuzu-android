@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`acc26667b`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12756](https://github.com/yuzu-emu/yuzu//pull/12756) | [`4677fd3f6`](https://github.com/yuzu-emu/yuzu//pull/12756/files) | general: applet multiprocess | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12873](https://github.com/yuzu-emu/yuzu//pull/12873) | [`7a4ea8991`](https://github.com/yuzu-emu/yuzu//pull/12873/files) | GPU: Implement channel scheduling. | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+| [12975](https://github.com/yuzu-emu/yuzu//pull/12975) | [`9ce43ee67`](https://github.com/yuzu-emu/yuzu//pull/12975/files) | Texture Cache: Fix untracking on GPU remap | [FernandoS27](https://github.com/FernandoS27/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
