@@ -1,3 +1,16 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`acc26667b`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12993](https://github.com/yuzu-emu/yuzu//pull/12993) | [`bca698a17`](https://github.com/yuzu-emu/yuzu//pull/12993/files) | am: rewrite part 1 | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13000](https://github.com/yuzu-emu/yuzu//pull/13000) | [`461eaca7e`](https://github.com/yuzu-emu/yuzu//pull/13000/files) | device_memory_manager: skip unregistered interfaces on invalidate | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13007](https://github.com/yuzu-emu/yuzu//pull/13007) | [`3c823254f`](https://github.com/yuzu-emu/yuzu//pull/13007/files) | android: Expose FSR slider and add vertical alignment setting | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
