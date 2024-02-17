@@ -1,3 +1,19 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [10529](https://github.com/yuzu-emu/yuzu//pull/10529) | [`368bf2211`](https://github.com/yuzu-emu/yuzu//pull/10529/files) | caches: make critical reclamation less eager and possible in more cases | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`acc26667b`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13000](https://github.com/yuzu-emu/yuzu//pull/13000) | [`461eaca7e`](https://github.com/yuzu-emu/yuzu//pull/13000/files) | device_memory_manager: skip unregistered interfaces on invalidate | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13006](https://github.com/yuzu-emu/yuzu//pull/13006) | [`3067bfd12`](https://github.com/yuzu-emu/yuzu//pull/13006/files) | buffer_cache: use mapped range with large vertex buffer size | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13017](https://github.com/yuzu-emu/yuzu//pull/13017) | [`af4248256`](https://github.com/yuzu-emu/yuzu//pull/13017/files) | kernel: add and enable system suspend type | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13026](https://github.com/yuzu-emu/yuzu//pull/13026) | [`462ea921e`](https://github.com/yuzu-emu/yuzu//pull/13026/files) |  shader_recompiler: fix non-const offset for arrayed image types  | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13034](https://github.com/yuzu-emu/yuzu//pull/13034) | [`c4500677a`](https://github.com/yuzu-emu/yuzu//pull/13034/files) | android: Input mapping | [t895](https://github.com/t895/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
