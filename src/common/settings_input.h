@@ -395,6 +395,10 @@ struct PlayerInput {
     u32 button_color_left;
     u32 button_color_right;
     std::string profile_name;
+
+#ifdef ANDROID
+    bool use_system_vibrator;
+#endif
 };
 
 struct TouchscreenInput {
