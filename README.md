@@ -1,3 +1,22 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [10529](https://github.com/yuzu-emu/yuzu//pull/10529) | [`368bf2211`](https://github.com/yuzu-emu/yuzu//pull/10529/files) | caches: make critical reclamation less eager and possible in more cases | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`acc26667b`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13000](https://github.com/yuzu-emu/yuzu//pull/13000) | [`461eaca7e`](https://github.com/yuzu-emu/yuzu//pull/13000/files) | device_memory_manager: skip unregistered interfaces on invalidate | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13006](https://github.com/yuzu-emu/yuzu//pull/13006) | [`3067bfd12`](https://github.com/yuzu-emu/yuzu//pull/13006/files) | buffer_cache: use mapped range with large vertex buffer size | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13026](https://github.com/yuzu-emu/yuzu//pull/13026) | [`462ea921e`](https://github.com/yuzu-emu/yuzu//pull/13026/files) |  shader_recompiler: fix non-const offset for arrayed image types  | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13030](https://github.com/yuzu-emu/yuzu//pull/13030) | [`4cbafc1ef`](https://github.com/yuzu-emu/yuzu//pull/13030/files) | service: audio: Rewrite IAudioController to new IPC | [german77](https://github.com/german77/) | Yes |
+| [13032](https://github.com/yuzu-emu/yuzu//pull/13032) | [`ec02a1cfe`](https://github.com/yuzu-emu/yuzu//pull/13032/files) | service: Implement functions needed by Qlaunch | [german77](https://github.com/german77/) | Yes |
+| [13034](https://github.com/yuzu-emu/yuzu//pull/13034) | [`50ecad547`](https://github.com/yuzu-emu/yuzu//pull/13034/files) | android: Input mapping | [t895](https://github.com/t895/) | Yes |
+| [13035](https://github.com/yuzu-emu/yuzu//pull/13035) | [`a07f0883b`](https://github.com/yuzu-emu/yuzu//pull/13035/files) | vi: manage resources independently of nvnflinger and refactor | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13048](https://github.com/yuzu-emu/yuzu//pull/13048) | [`72d806db0`](https://github.com/yuzu-emu/yuzu//pull/13048/files) | ns: rewrite for new IPC | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
