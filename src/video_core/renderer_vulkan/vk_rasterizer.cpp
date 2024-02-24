@@ -125,9 +125,11 @@ VkRect2D GetScissorState(const Maxwell& regs, size_t index, u32 up_scale = 1, u3
         return value < 0 ? std::min<s32>(converted_value - acumm, -1)
                          : std::max<s32>(converted_value + acumm, 1);
     };
+    const bool lower_left = regs.window_origin.mode != Maxwell::WindowOrigin::Mode::UpperLeft;
+    const s32 y_adj = lower_left ? scale_up(regs.surface_clip.height - (src.max_y - src.min_y)) : 0;
     if (src.enable) {
         scissor.offset.x = scale_up(static_cast<s32>(src.min_x));
-        scissor.offset.y = scale_up(static_cast<s32>(src.min_y));
+        scissor.offset.y = scale_up(static_cast<s32>(src.min_y)) + y_adj;
         scissor.extent.width = scale_up(src.max_x - src.min_x);
         scissor.extent.height = scale_up(src.max_y - src.min_y);
     } else {
