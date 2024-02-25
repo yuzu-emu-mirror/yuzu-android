@@ -1,3 +1,15 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`2831f5dc6`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13096](https://github.com/yuzu-emu/yuzu//pull/13096) | [`0a8759057`](https://github.com/yuzu-emu/yuzu//pull/13096/files) | texture_cache: use two-pass collection for costly load resources | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13154](https://github.com/yuzu-emu/yuzu//pull/13154) | [`ca7f949ee`](https://github.com/yuzu-emu/yuzu//pull/13154/files) | core: hid: Reintroduce vibration filter | [german77](https://github.com/german77/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
