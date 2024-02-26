@@ -1,3 +1,18 @@
+| Pull Request | Commit | Title | Author | Merged? |
+|----|----|----|----|----|
+| [12461](https://github.com/yuzu-emu/yuzu//pull/12461) | [`a84e8e26f`](https://github.com/yuzu-emu/yuzu//pull/12461/files) | Rework Nvdec and VIC to fix out-of-order videos, and speed up decoding. | [Kelebek1](https://github.com/Kelebek1/) | Yes |
+| [12749](https://github.com/yuzu-emu/yuzu//pull/12749) | [`aad4b0d6f`](https://github.com/yuzu-emu/yuzu//pull/12749/files) | general: workarounds for SMMU syncing issues | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13018](https://github.com/yuzu-emu/yuzu//pull/13018) | [`fffec12d3`](https://github.com/yuzu-emu/yuzu//pull/13018/files) | am: rewrite part 2 | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13096](https://github.com/yuzu-emu/yuzu//pull/13096) | [`0a8759057`](https://github.com/yuzu-emu/yuzu//pull/13096/files) | texture_cache: use two-pass collection for costly load resources | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13122](https://github.com/yuzu-emu/yuzu//pull/13122) | [`5dc08c7fe`](https://github.com/yuzu-emu/yuzu//pull/13122/files) | vk_rasterizer: flip scissor y on lower left origin mode | [liamwhite](https://github.com/liamwhite/) | Yes |
+| [13135](https://github.com/yuzu-emu/yuzu//pull/13135) | [`fc6a87bba`](https://github.com/yuzu-emu/yuzu//pull/13135/files) | service: hid: Migrate HidServer to new IPC | [german77](https://github.com/german77/) | Yes |
+| [13159](https://github.com/yuzu-emu/yuzu//pull/13159) | [`dc50b95a4`](https://github.com/yuzu-emu/yuzu//pull/13159/files) | core: enable error applet, add stubs for web applet | [liamwhite](https://github.com/liamwhite/) | Yes |
+
+
+End of merge log. You can find the original README.md below the break.
+
+-----
+
 <!--
 SPDX-FileCopyrightText: 2018 yuzu Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
